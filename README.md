@@ -1,2 +1,2 @@
 # ubuntu-settings
-settings for ubuntu
+settings for ubuntu including frequently used commands and application settings like vim urxvt
