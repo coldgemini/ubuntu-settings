@@ -1,0 +1,58 @@
+vim ~/.profile
+# 添加下面内容
+export LANG="zh_CN.UTF-8"
+export LC_ALL="zh_CN.UTF-8"
+sudo locale-gen zh_CN.UTF-8
+
+sudo apt-get install zh-autoconvert
+sudo apt-get install zhcon
+
+vi /var/lib/locales/supported.d/local  加入
+zh_CN.GBK GBK
+zh_CN.GB2312 GB2312
+sudo locale-gen
+修改用户目录下的.profile或.bashrc文件，增加以下内容：
+修改/etc/environment，增加以下内容
+LANGUAGE="zh_CN:zh:en_US:en"
+LANG=zh_CN.GBK 
+sudo apt-get install fonts-droid-fallback ttf-wqy-zenhei ttf-wqy-microhei fonts-arphic-ukai fonts-arphic-uming
+sudo apt-get install language-pack-zh-hans
+sudo apt-get install language-pack-[cod] language-pack-gnome-[cod] language-pack-[cod]-base language-pack-gnome-[cod]-base
+
+gnome-control-center
+gnome-language-selector
+sudo apt install dbus-x11
+im-config
+fcitx-table-wbpy
+fcitx-configtool
+
+wpa_passphrase ssid passwd
+iwlist
+ifconfig
+sudo ifup wlan0
+sudo iwconfig wlan0
+sudo iwlist wlan0 scan
+sudo ifconfig wlan0 up
+wpa_supplicant -i wlan0 -c wpa_supplicant.conf
+sudo wpa_supplicant -B -iwlan0 -c wpa_supplicant.conf -Dwext
+sudo dhclient wlan0
+sudo ifconfig
+sudo ifconfig enx00e04c1b9b53 down
+ip addr
+
+cat /proc/asound/modules
+alsamixer -c 1
+
+sudo apt-get install ntpdate
+sudo tzconfig
+dpkg-reconfigure tzdata
+sudo dpkg-reconfigure tzdat
+sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+sudo ntpdate cn.pool.ntp.org
+hwclock --systohc
+
+xrdb ~/.Xresources
+
+git clone https://github.com/tomasr/molokai.git
+
+dpkg-reconfigure console-setup
