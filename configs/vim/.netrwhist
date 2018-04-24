@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/xiang/.i3'
+let g:netrw_dirhist_2='/home/xiang/Workbench/caffe-ssd/examples/MobileNet-SSD/example_noflip_label_merged'
+let g:netrw_dirhist_3='/home/xiang/Workbench/crosscompile/tensorflow/armv6-compiler'
+let g:netrw_dirhist_4='/home/xiang/Todo'
