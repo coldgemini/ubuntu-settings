@@ -148,7 +148,9 @@ for_window [class="Eog"] floating enable
 
 # Open applications on specific workspaces
 #assign [class="URxvt"] $ws1
-#assign [class="/usr/bin/google-chrome"] $ws5
+assign [class="google-chrome"] 7:7BWR
+assign [class="Firefox"] 7:7BWR
+assign [class="netease-cloud-music"] workspace 8:8MED
 #assign [class="/usr/bin/code"] workspace 3:3CODE
 # assign [class="Skype"] $ws5
 
@@ -211,7 +213,9 @@ bar {
 #user setting
 exec --no-startup-id nm-applet
 #exec --no-startup-id feh --bg-scale /usr/share/backgrounds/Cielo_estrellado_by_Eduardo_Diez_Viñuela.jpg
-exec --no-startup-id feh --bg-scale /usr/share/backgrounds/Spring_by_Peter_Apas.jpg
+exec --no-startup-id feh --bg-scale $HOME/Pictures/background.jpg
 bindsym $mod+Shift+g exec /usr/bin/google-chrome
+bindsym $mod+Shift+f exec /usr/bin/firefox
 bindsym $mod+Shift+m exec /usr/bin/code -n
+bindsym $mod+Shift+u exec /usr/bin/netease-cloud-music
 bindsym $mod+Shift+n exec /home/xiang/apps/boostnote/usr/share/boostnote/Boostnote

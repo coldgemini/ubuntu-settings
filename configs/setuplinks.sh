@@ -1,3 +1,4 @@
+#echo 'source ~/.bashrc.user' >> ~/.bashrc
 if [ ! -e $HOME/.backups ];then
 	mkdir $HOME/.backups
 fi
