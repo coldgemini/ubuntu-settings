@@ -1,3 +1,6 @@
 [submodule "configs/urxvt/urxvt-perls"]
 	path = configs/urxvt/urxvt-perls
 	url = https://github.com/muennich/urxvt-perls.git
+[submodule "configs/urxvt/urxvt-tabbedex"]
+	path = configs/urxvt/urxvt-tabbedex
+	url = https://github.com/mina86/urxvt-tabbedex.git
