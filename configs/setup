@@ -6,6 +6,7 @@ sudo locale-gen zh_CN.UTF-8
 
 sudo apt-get install zh-autoconvert
 sudo apt-get install zhcon
+sudo apt install x11-xserver-utils
 
 vi /var/lib/locales/supported.d/local  加入
 zh_CN.GBK GBK
@@ -18,6 +19,7 @@ LANG=zh_CN.GBK
 sudo apt-get install fonts-droid-fallback ttf-wqy-zenhei ttf-wqy-microhei fonts-arphic-ukai fonts-arphic-uming
 sudo apt-get install language-pack-zh-hans
 sudo apt-get install language-pack-[cod] language-pack-gnome-[cod] language-pack-[cod]-base language-pack-gnome-[cod]-base
+sudo apt-get install fonts-font-awesome
 
 gnome-control-center
 gnome-language-selector
@@ -40,6 +42,7 @@ sudo ifconfig
 sudo ifconfig enx00e04c1b9b53 down
 ip addr
 
+sudo apt  install alsa-utils pulseaudio
 cat /proc/asound/modules
 alsamixer -c 1
 
