@@ -148,7 +148,7 @@ for_window [class="Eog"] floating enable
 
 # Open applications on specific workspaces
 #assign [class="URxvt"] $ws1
-assign [class="google-chrome"] 7:7BWR
+assign [class="Google-chrome"] 7:7BWR
 assign [class="Firefox"] 7:7BWR
 assign [class="netease-cloud-music"] workspace 8:8MED
 #assign [class="/usr/bin/code"] workspace 3:3CODE
