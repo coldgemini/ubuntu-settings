@@ -1,4 +1,5 @@
-sudo apt install gdebi-core
+sudo apt install gdebi-core python vim-gtk sox libsox-fmt-all
+sudo apt install rxvt-unicode-256color x11-xserver-utils i3
 
 vim ~/.profile
 # 添加下面内容
@@ -60,3 +61,6 @@ xrdb ~/.Xresources
 git clone https://github.com/tomasr/molokai.git
 
 dpkg-reconfigure console-setup
+
+git config --global user.email "coldgemini@foxmail.com"
+git config --global user.name "xiang"
