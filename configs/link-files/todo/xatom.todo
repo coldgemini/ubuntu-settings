@@ -16,3 +16,4 @@ install popular vim plugins
 git lfs
 
 python-setup.sh
+nginx ftp server
