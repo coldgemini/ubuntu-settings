@@ -14,3 +14,5 @@ develop todo system in vimscript
 
 install popular vim plugins
 git lfs
+
+python-setup.sh
