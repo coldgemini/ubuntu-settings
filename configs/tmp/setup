@@ -1,3 +1,4 @@
+sudo apt install wireless-tools net-tools
 sudo apt install gdebi-core python vim-gtk sox libsox-fmt-all
 sudo apt install rxvt-unicode-256color x11-xserver-utils i3
 

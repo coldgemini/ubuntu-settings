@@ -3,3 +3,9 @@ x 2018-04-25 2018-04-25 write scripts to automate environment setup
 x 2018-04-25 setup git branches for xatom and workpc
 x 2018-04-25 configure i3 dhcp
 (A) configure proxy
+
+ssr autostart
+auto install apt packages from startup
+setup dhcp
+try using ubuntu server for ssr
+burn native android system
