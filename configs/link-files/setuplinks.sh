@@ -1,4 +1,7 @@
-#echo 'source ~/.bashrc.user' >> ~/.bashrc
+[[ ! -z "$BASHRCUSER" ]] && echo "already sourcing .bashrc.user" || echo "adding source .bashrc.user to .bashrc"
+if [[ -z "$BASHRCUSER" ]];then
+	echo 'source ~/.bashrc.user' >> ~/.bashrc
+fi
 if [ ! -d $HOME/.backups ];then
 	echo "creating .backups folder"
 	mkdir $HOME/.backups
@@ -70,4 +73,11 @@ if [ -L $HOME/.urxvt ];then
 	ln -s $PWD/urxvt $HOME/.urxvt;
 else
 	ln -s $PWD/urxvt $HOME/.urxvt;
+fi
+if [ -L $HOME/Todo ];then
+	echo "moving Todo to .backups folder"
+	mv $HOME/Todo $HOME/.backups/Todo
+	ln -s $PWD/todo $HOME/Todo;
+else
+	ln -s $PWD/todo $HOME/Todo;
 fi

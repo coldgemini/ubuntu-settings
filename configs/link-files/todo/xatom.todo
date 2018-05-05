@@ -9,3 +9,8 @@ auto install apt packages from startup
 setup dhcp
 try using ubuntu server for ssr
 burn native android system
+
+develop todo system in vimscript
+
+install popular vim plugins
+git lfs
