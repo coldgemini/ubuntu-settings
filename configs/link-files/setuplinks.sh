@@ -81,3 +81,10 @@ if [ -L $HOME/Todo ];then
 else
 	ln -s $PWD/todo $HOME/Todo;
 fi
+if [ -L $HOME/.todo.sh ];then
+	echo "moving .todo.sh to .backups folder"
+	mv $HOME/.todo.sh $HOME/.backups/.todo.sh
+	ln -s $PWD/todo.sh $HOME/.todo.sh;
+else
+	ln -s $PWD/todo.sh $HOME/.todo.sh;
+fi

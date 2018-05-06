@@ -46,6 +46,8 @@ highlight  default  link  TodoDone       Comment
 highlight  default  link  TodoPriorityA  Constant
 highlight  default  link  TodoPriorityB  Statement
 highlight  default  link  TodoPriorityC  Identifier
+highlight  default  link  TodoPriorityD  String
+highlight  default  link  TodoPriorityF  Operator
 highlight  default  link  TodoPriorityP  Special
 highlight  default  link  TodoDate       PreProc
 highlight  default  link  TodoProject    Special

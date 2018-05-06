@@ -12,17 +12,17 @@ x 2018-05-06 try using ubuntu server for ssr
 
 x 2018-05-06 develop todo system in vimscript
 
-install popular vim plugins
-git lfs
+(D) install popular vim plugins
+x 2018-05-06 git lfs
 
 x 2018-05-06 python-setup.sh
-nginx ftp server
+(D) nginx ftp server
 
 x 2018-05-06 connect android through wireless
-bash todo functions, vim syntax, comment, from magicpython
+x 2018-05-06 bash todo functions, vim syntax, comment, from magicpython
 
 systemctl systemd
 
-online music list
+(P) online music list
 
-sox as deamon
+(P) sox as deamon
