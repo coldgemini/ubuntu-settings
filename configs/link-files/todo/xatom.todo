@@ -1,19 +1,21 @@
 x 2018-04-25 2018-04-25 write scripts to automate environment setup
-(A) setup git submodules for urxvt perl modules
+x 2018-05-06 setup git submodules for urxvt perl modules
 x 2018-04-25 setup git branches for xatom and workpc
 x 2018-04-25 configure i3 dhcp
-(A) configure proxy
+x 2018-05-06 configure proxy
 
-ssr autostart
-auto install apt packages from startup
-setup dhcp
-try using ubuntu server for ssr
-burn native android system
+x 2018-05-06 ssr autostart
+(P) auto install apt packages from startup
+(P) setup dhcp
+x 2018-05-06 try using ubuntu server for ssr
+(P) burn native android system
 
-develop todo system in vimscript
+x 2018-05-06 develop todo system in vimscript
 
 install popular vim plugins
 git lfs
 
-python-setup.sh
+x 2018-05-06 python-setup.sh
 nginx ftp server
+
+x 2018-05-06 connect android through wireless
