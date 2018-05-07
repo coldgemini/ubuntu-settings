@@ -1,3 +1,35 @@
+if _BASHRC_WAS_RUN 2>/dev/null; then
+    :;
+else    # Stuff that only needs to run the first time we source .bashrc.
+        # Useful to allow re-sourcing new changes, without breaking/changing things in this section
+    alias _BASHRC_WAS_RUN=true
+    # ... continued ...
+fi
+
+# Last mod time of a file or files
+get_file_timestamp () {
+    ls -1 --time-style=+%s -l  "$@" | cut -f6 -d" "
+}
+
+# Make sure our version of the .bashrc file is up-to-date, or reload it.
+chk_bashrc_timestamp () {
+	if [[ "$_BASHRC_TIMESTAMP" -lt "$(get_file_timestamp $(readlink -f $HOME/.bashrc.user))" ]]; then
+        echo >&2 "Reloading .bashrc.user..."
+        . ~/.bashrc.user
+    fi
+}
+_BASHRC_TIMESTAMP=$(date +%s)
+
+prompt_cmd () {
+    chk_bashrc_timestamp
+}
+PROMPT_COMMAND=prompt_cmd
+
+# some ls aliases
+#alias ll='ls -alF'
+#alias la='ls -A'
+#alias l='ls -CF'
+
 alias bashrcuser='source ~/.bashrc.user'
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH
@@ -59,3 +91,8 @@ alias nautilus='nautilus --no-desktop'
 #unset https_proxy
 alias dirnums='du -a | cut -d/ -f2 | sort | uniq -c | sort -nr'
 export pgscript=/home/xiang/Documents/Notes/deepsight/python/PG
+
+#export bashrc_user_testno=$(stat -c %Y ~/.bashrc.user)
+#export PROMPT_COMMAND='test $(stat -c %Y ~/.bashrc.user) -ne $bashrc_user_testno && source ~/.bashrc'
+
+#echo 'sourced ~/.bashrc.user'  
