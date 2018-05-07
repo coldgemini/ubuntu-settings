@@ -72,6 +72,7 @@ map <C-F3> \be
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 设置当文件被改动时自动载入
 set autoread
+au CursorHold * checktime
 " quickfix模式
 autocmd FileType c,cpp map <buffer> <leader><space> :w<cr>:make<cr>
 "代码补全 
