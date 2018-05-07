@@ -96,3 +96,4 @@ export pgscript=/home/xiang/Documents/Notes/deepsight/python/PG
 #export PROMPT_COMMAND='test $(stat -c %Y ~/.bashrc.user) -ne $bashrc_user_testno && source ~/.bashrc'
 
 #echo 'sourced ~/.bashrc.user'  
+alias todo='~/.todo.sh'
