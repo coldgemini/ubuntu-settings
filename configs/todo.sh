@@ -12,11 +12,11 @@ help() {
     echo TodoList Vim tool
     echo Usage:
     echo -e "\t" todo help
-    echo -e "\t" todo add: add a todolist file
-    echo -e "\t" todo del: delete a todolist file
-    echo -e "\t" todo list: list all todo files
-    echo -e "\t" todo cls: list all todo list classes
-    echo -e "\t" todo file: edit the corresponding todo file
+    echo -e "\t" todo add:"\t"add a todolist file
+    echo -e "\t" todo del:"\t"delete a todolist file
+    echo -e "\t" todo list:"\t"list all todo files
+    echo -e "\t" todo cls:"\t"list all todo list classes
+    echo -e "\t" todo file:"\t"edit the corresponding todo file
 }
 
 class() {
