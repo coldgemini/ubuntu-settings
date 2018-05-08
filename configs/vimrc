@@ -204,11 +204,14 @@ nnoremap <C-p> :bp<CR>
 nnoremap <C-n> :bn<CR>
 call plug#begin('~/.vim/plugged')
 
+Plug 'altercation/vim-colors-solarized'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'bling/vim-airline'
 Plug 'google/vim-maktaba'
 Plug 'bazelbuild/vim-bazel'
+Plug 'davidhalter/jedi-vim'
+Plug 'Valloric/YouCompleteMe', { 'do': 'python install.py --clang-completer'}
 call plug#end()
 
 nnoremap <CR> o<Esc>
