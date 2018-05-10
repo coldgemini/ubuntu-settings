@@ -71,7 +71,7 @@ if version >= 603
 	set encoding=utf-8
 endif
 " 设置配色方案
-colorscheme molokai
+colorscheme molokai_todo
 "字体 
 if (has("gui_running")) 
 	set guifont=Ubuntu\ Mono\ 18

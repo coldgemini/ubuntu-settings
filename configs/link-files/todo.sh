@@ -12,9 +12,11 @@ help() {
     echo TodoList Vim tool
     echo Usage:
     echo -e "\t" todo help
-    echo -e "\t" todo list: list all todo files
-    echo -e "\t" todo cls: list all todo list classes
-    echo -e "\t" todo file: edit the corresponding todo file
+    echo -e "\t" todo add:"\t"add a todolist file
+    echo -e "\t" todo del:"\t"delete a todolist file
+    echo -e "\t" todo list:"\t"list all todo files
+    echo -e "\t" todo cls:"\t"list all todo list classes
+    echo -e "\t" todo file:"\t"edit the corresponding todo file
 }
 
 class() {
@@ -27,6 +29,22 @@ class() {
     echo -e "\t" P	pending
 }
 
+add() {
+	if [[ ! -e $Todo_Dir/$1.todo ]];then
+		$EDITOR $Todo_Dir/$1.todo
+	else
+		echo "$1.todo already exist"
+	fi
+}
+
+del() {
+	if [[ -e $Todo_Dir/$1.todo ]];then
+		rm $Todo_Dir/$1.todo
+	else
+		echo "$1.todo does not exist"
+	fi
+}
+
 doElse() {
 	if [[ -e $Todo_Dir/$1.todo ]];then
 		$EDITOR $Todo_Dir/$1.todo
@@ -37,8 +55,12 @@ doElse() {
 
 if [ $# == 0 ];then
     help
-elif [ $# != 1 ];then
-    help
+#elif [ $# != 1 ];then
+    #help
+elif [ $1 == "add" ];then
+    add $2
+elif [ $1 == "del" ];then
+    del $2
 elif [ $1 == "help" ];then
     help
 elif [ $1 == "list" ];then

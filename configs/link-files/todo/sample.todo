@@ -1,0 +1,23 @@
+#2018-05-10 # sample comment
+
+D2018-05-10 sample keywords: add build fix make
+
+(A) task priority A
+(B) task priority B
+(C) task priority C
+(D) task delayed
+(F) task focused
+(P) task pending on condition
+
+x 2018-05-10 task done
+
+2018-05-10 task created on date
+D2018-05-10 task due on date
+
+task in context @home
+task in project +hehe
+
+task with some details:
+	1. place to do the task
+	2. person to do the task
+	3. files related to the task

@@ -1,6 +1,6 @@
 image processing basics: edge, line, morphology,
 
-todo format, add brackets, build 
+x 2018-05-10 todo format, add brackets, build 
 
 (D) netease-cloud-music dependencies
 
@@ -10,4 +10,5 @@ arm neon
 
 opencl
 
-vim folding
+(D) vim folding
+take vim folder outside ubuntu-settings git repository and add build script
