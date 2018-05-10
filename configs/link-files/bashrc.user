@@ -1,3 +1,5 @@
+alias ll='ls -al'
+alias la='ls -a'
 export BASHRCUSER=true
 alias bashrcuser='source ~/.bashrc.user'
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
@@ -42,7 +44,7 @@ export CROSS_COMPILE=/home/xiang/Workbench/arm-eabi-4.6/bin/arm-eabi-
 alias add-arm-runtime='export LD_LIBRARY_PATH=/home/xiang/Workbench/linaro/latest-7/runtime-gcc-linaro-7.2.1-2017.11-arm-linux-gnueabihf/lib/arm-linux-gnueabihf:/home/xiang/Workbench/linaro/latest-7/runtime-gcc-linaro-7.2.1-2017.11-arm-linux-gnueabihf/usr/lib/arm-linux-gnueabihf:$LD_LIBRARY_PATH'
 export OPENCV_ARM=/home/xiang/Downloads/tmp/opencv-3.3.1/platforms/linux/build
 alias gpic=gpicview
-alias netease-cloud-music=/home/xiang/apps/netease-cloud-music/usr/bin/netease-cloud-music
+#alias netease-cloud-music=/home/xiang/apps/netease-cloud-music/usr/bin/netease-cloud-music
 alias addssdpycaffe='export PYTHONPATH=/home/xiang/Workbench/caffe-ssd/build/install/python:$PYTHONPATH'
 alias cpxclip='xclip -selection -c'
 alias boostnote=/home/xiang/apps/boostnote/usr/share/boostnote/Boostnote
@@ -69,3 +71,7 @@ mailfile() {
 
 export http_proxy=”127.0.0.1:8123”
 export https_proxy=”127.0.0.1:8123”
+alias vim=/home/xiang/.local/bin/vim
+alias view=/home/xiang/.local/bin/view
+alias gvim=/home/xiang/.local/bin/gvim
+alias gview=/home/xiang/.local/bin/gview

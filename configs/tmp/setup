@@ -63,5 +63,9 @@ git clone https://github.com/tomasr/molokai.git
 
 dpkg-reconfigure console-setup
 
+<<<<<<< HEAD:configs/tmp/setup
 git config --global user.email "coldgemini@foxmail.com"
 git config --global user.name "xiang"
+=======
+git config --global http.proxy http://mydomain\\myusername:mypassword@myproxyserver:8080
+>>>>>>> 7232ed9cd4f96f16dc771d30b5ffeb063cf79980:configs/setup
