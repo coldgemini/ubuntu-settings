@@ -5,14 +5,13 @@ x 2018-04-25 configure i3 dhcp
 x 2018-05-06 configure proxy
 
 x 2018-05-06 ssr autostart
-(P) auto install apt packages from startup
-(P) setup dhcp
+(D) auto install apt packages from startup
 x 2018-05-06 try using ubuntu server for ssr
 (P) burn native android system
 
 x 2018-05-06 develop todo system in vimscript
 
-(D) install popular vim plugins
+x 2018-05-12 install popular vim plugins
 x 2018-05-06 git lfs
 
 x 2018-05-06 python-setup.sh
@@ -22,7 +21,3 @@ x 2018-05-06 connect android through wireless
 x 2018-05-06 bash todo functions, vim syntax, comment, from magicpython
 
 systemctl systemd
-
-(P) online music list
-
-(P) sox as deamon

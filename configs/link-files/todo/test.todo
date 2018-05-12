@@ -2,10 +2,12 @@ task in con3ext @hom1
 	1. place to do the task
 	2. person to do the task
 	3. files related to the task
+
 task in con2ext @hom2hh
 	1. place to do the task
 	2. person to do the task
 	3. files related to the task
+
 task in con1ext @hom3
 	1. place to do the task
 	2. person to do the task
@@ -31,7 +33,8 @@ D2018-05-10 task with some details:
 	1. place to do the task
 	2. person to do the task
 	3. files related to the task
-task in project +heha
+
+D2018-05-12 task in project +heha
 	1. place to do the task
 	2. person to do the task
 	3. files related to the task
@@ -39,6 +42,6 @@ task in project +hehe
 	1. place to do the task
 	2. person to do the task
 	3. files related to the task
-task in project +heho
+task in project +heho @home
 	1. place to do the task
 	2. person to do the task
