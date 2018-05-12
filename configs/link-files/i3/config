@@ -143,6 +143,7 @@ bindsym $mod+Shift+8 move container to workspace 8:8MED
 bindsym $mod+Shift+9 move container to workspace 9:9NOTE
 bindsym $mod+Shift+0 move container to workspace 10:0RSV
 
+bindsym $mod+Tab workspace back_and_forth
 #open in floating mode
 for_window [class="Eog"] floating enable
 
@@ -192,6 +193,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bindsym $mod+m bar mode toggle
 bar {
+		#position top
         status_command i3status
         tray_output primary
 		font xft:Noto Sans 12
@@ -220,3 +222,12 @@ bindsym $mod+Shift+f exec /usr/bin/firefox
 bindsym $mod+Shift+m exec /usr/bin/code -n
 bindsym $mod+Shift+u exec /usr/bin/netease-cloud-music
 bindsym $mod+Shift+n exec /home/xiang/apps/boostnote/usr/share/boostnote/Boostnote
+
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+
+bindsym XF86AudioLowerVolume exec amixer -q set Master 5%-
+bindsym XF86AudioMute exec amixer -q set Master toggle
+
+bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 10
+
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% #increase sound volume
