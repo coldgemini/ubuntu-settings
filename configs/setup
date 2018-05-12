@@ -58,3 +58,4 @@ git clone https://github.com/tomasr/molokai.git
 dpkg-reconfigure console-setup
 
 git config --global http.proxy http://mydomain\\myusername:mypassword@myproxyserver:8080
+git config --global --unset http.proxy

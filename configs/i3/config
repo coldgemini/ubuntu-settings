@@ -34,7 +34,8 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec urxvt
+#bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec gnome-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -114,12 +115,12 @@ bindsym $mod+1 workspace 1:1CMD
 bindsym $mod+2 workspace 2:2CMD
 bindsym $mod+3 workspace 3:3CMD
 bindsym $mod+4 workspace 4:4CMD
-bindsym $mod+5 workspace 5:5CODE
-bindsym $mod+6 workspace 6:6CODE
-bindsym $mod+7 workspace 7:7BWR
-bindsym $mod+8 workspace 8:8MED
-bindsym $mod+9 workspace 9:9NOTE
-bindsym $mod+0 workspace 10:0RSV
+bindsym $mod+5 workspace 5:5CMD
+bindsym $mod+6 workspace 6:6CMD
+bindsym $mod+7 workspace 7:7CMD
+bindsym $mod+8 workspace 8:8CMD
+bindsym $mod+9 workspace 9:9CMD
+bindsym $mod+0 workspace 0:0CMD
 bindsym $mod+Ctrl+1 workspace 1:C1CMD
 bindsym $mod+Ctrl+2 workspace 2:C2CMD
 bindsym $mod+Ctrl+3 workspace 3:C3CMD
@@ -130,23 +131,52 @@ bindsym $mod+Ctrl+7 workspace 7:C7CMD
 bindsym $mod+Ctrl+8 workspace 8:C8CMD
 bindsym $mod+Ctrl+9 workspace 9:C9CMD
 bindsym $mod+Ctrl+0 workspace 0:C0CMD
+bindsym $mod+Shift+1 workspace 1:S1CMD
+bindsym $mod+Shift+2 workspace 2:S2CMD
+bindsym $mod+Shift+3 workspace 3:S3CMD
+bindsym $mod+Shift+4 workspace 4:S4CMD
+bindsym $mod+Shift+5 workspace 5:S5CMD
+bindsym $mod+Shift+6 workspace 6:S6CMD
+bindsym $mod+Shift+7 workspace 7:S7CMD
+bindsym $mod+Shift+8 workspace 8:S8CMD
+bindsym $mod+Shift+9 workspace 9:S9CMD
+bindsym $mod+Shift+0 workspace 0:S0CMD
 bindsym $mod+Ctrl+t workspace TMP
+bindsym $mod+Ctrl+x workspace TMPX
+bindsym $mod+Ctrl+z workspace ZEAL
+bindsym $mod+Ctrl+d workspace DOCS
+bindsym $mod+Ctrl+w workspace WEB
+bindsym $mod+Ctrl+g workspace GIMP
+bindsym $mod+Ctrl+n workspace NOTE
+bindsym $mod+Ctrl+a workspace AUDIO
+bindsym $mod+Ctrl+v workspace VIDEO
+bindsym $mod+Ctrl+Shift+1 workspace CODE1
+bindsym $mod+Ctrl+Shift+2 workspace CODE2
+bindsym $mod+Ctrl+Shift+3 workspace CODE3
+bindsym $mod+Ctrl+Shift+4 workspace CODE4
+bindsym $mod+Ctrl+Shift+5 workspace CODE5
+bindsym $mod+Ctrl+Shift+6 workspace CODE6
+bindsym $mod+Ctrl+Shift+7 workspace CODE7
+bindsym $mod+Ctrl+Shift+8 workspace CODE8
+bindsym $mod+Ctrl+Shift+9 workspace CODE9
+bindsym $mod+Ctrl+Shift+0 workspace CODE0
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1:1CMD
-bindsym $mod+Shift+2 move container to workspace 2:2CMD
-bindsym $mod+Shift+3 move container to workspace 3:3CMD
-bindsym $mod+Shift+4 move container to workspace 4:4CMD
-bindsym $mod+Shift+5 move container to workspace 5:5CODE
-bindsym $mod+Shift+6 move container to workspace 6:6CODE
-bindsym $mod+Shift+7 move container to workspace 7:7BWR
-bindsym $mod+Shift+8 move container to workspace 8:8MED
-bindsym $mod+Shift+9 move container to workspace 9:9NOTE
-bindsym $mod+Shift+0 move container to workspace 10:0RSV
+#bindsym $mod+Shift+1 move container to workspace 1:1CMD
+#bindsym $mod+Shift+2 move container to workspace 2:2CMD
+#bindsym $mod+Shift+3 move container to workspace 3:3CMD
+#bindsym $mod+Shift+4 move container to workspace 4:4CMD
+#bindsym $mod+Shift+5 move container to workspace 5:5CODE
+#bindsym $mod+Shift+6 move container to workspace 6:6CODE
+#bindsym $mod+Shift+7 move container to workspace 7:7BWR
+#bindsym $mod+Shift+8 move container to workspace 8:8MED
+#bindsym $mod+Shift+9 move container to workspace 9:9NOTE
+#bindsym $mod+Shift+0 move container to workspace 10:0RSV
 
 #open in floating mode
 for_window [class="Eog"] floating enable
 for_window [class="Mask"] floating enable
+for_window [class="^i3f*"] floating enable
 
 # Open applications on specific workspaces
 #assign [class="URxvt"] $ws1
@@ -217,8 +247,12 @@ bar {
 exec --no-startup-id nm-applet
 #exec --no-startup-id feh --bg-scale /usr/share/backgrounds/Cielo_estrellado_by_Eduardo_Diez_Viñuela.jpg
 exec --no-startup-id feh --bg-scale $HOME/Pictures/background.jpg
-bindsym $mod+Shift+g exec /usr/bin/google-chrome
+bindsym $mod+Shift+w exec /usr/bin/google-chrome
 bindsym $mod+Shift+f exec /usr/bin/firefox
 bindsym $mod+Shift+m exec /usr/bin/code -n
 bindsym $mod+Shift+u exec /usr/bin/netease-cloud-music
 bindsym $mod+Shift+n exec /home/xiang/apps/boostnote/usr/share/boostnote/Boostnote
+bindsym $mod+Shift+z exec /usr/bin/zeal
+#bindsym $mod+Shift+g exec /usr/bin/gimp
+bindsym $mod+Shift+g exec flatpak run org.gimp.GIMP
+bindsym $mod+Tab workspace back_and_forth
