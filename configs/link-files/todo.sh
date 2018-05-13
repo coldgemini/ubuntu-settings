@@ -2,7 +2,7 @@
 
 set -e
 
-Todo_Dir=~/Todo
+Todo_Dir=~/todosync
 
 if [ -z $EDITOR ];then
     EDITOR=vim
@@ -63,6 +63,8 @@ elif [ $1 == "del" ];then
     del $2
 elif [ $1 == "help" ];then
     help
+elif [ $1 == "ls" ];then
+	ls $Todo_Dir
 elif [ $1 == "list" ];then
 	ls $Todo_Dir
 elif [ $1 == "cls" ];then
