@@ -15,6 +15,7 @@ help() {
     echo -e "\t" todo add:"\t"add a todolist file
     echo -e "\t" todo del:"\t"delete a todolist file
     echo -e "\t" todo list:"\t"list all todo files
+    echo -e "\t" todo ls:"\t"list all todo files
     echo -e "\t" todo cls:"\t"list all todo list classes
     echo -e "\t" todo file:"\t"edit the corresponding todo file
 }
@@ -63,6 +64,8 @@ elif [ $1 == "del" ];then
     del $2
 elif [ $1 == "help" ];then
     help
+elif [ $1 == "ls" ];then
+	ls $Todo_Dir
 elif [ $1 == "list" ];then
 	ls $Todo_Dir
 elif [ $1 == "cls" ];then

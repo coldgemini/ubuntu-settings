@@ -97,6 +97,7 @@ export pgscript=/home/xiang/Documents/Notes/deepsight/python/PG
 
 #echo 'sourced ~/.bashrc.user'  
 alias todo='~/.todo.sh'
+alias td='~/.todo.sh'
 export VIMRUNTIMEDIR=/usr/local/share/vim/vim80
 alias vim=/home/xiang/.local/bin/vim
 alias vimdiff=/home/xiang/.local/bin/vimdiff
@@ -105,3 +106,20 @@ alias gvim=/home/xiang/.local/bin/gvim
 alias gvimdiff=/home/xiang/.local/bin/gvimdiff
 alias gview=/home/xiang/.local/bin/gview
 alias gimp='flatpak run org.gimp.GIMP'
+
+alias sudo='sudo '
+# source /usr/share/autojump/autojump.zsh
+alias dfh='df -h'
+alias gdf='git diff'
+alias gst='git status'
+alias gps='git push'
+alias gpl='git pull'
+alias gcm='git commit -a'
+alias gco='git checkout'
+alias gbr='git branch -a'
+alias grs='git reset'
+alias gcf='git config --global'
+alias gcl='git clone'
+alias gad='git add'
+alias gap='git config --global http.proxy=socks5://192.168.1.51:3333'
+alias gdp='git config --global --unset http.proxy'

@@ -14,10 +14,22 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'ervandew/supertab'
 Plugin 'Chiel92/vim-autoformat'
+" Plugin 'google/vim-maktaba'
+" Plugin 'bazelbuild/vim-bazel'
+Plugin 'kshenoy/vim-signature'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-speeddating'
+Plugin 'lambacck/python_matchit'
+" Plugin 'fholgado/minibufexpl.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'vim-scripts/taglist.vim'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -32,13 +44,14 @@ Plugin 'tpope/vim-fugitive'
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
 Plugin 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plugin 'scrooloose/nerdcommenter'
+"Plugin 'scrooloose/nerdcommenter'
 Plugin 'bling/vim-airline'
 "Plug 'google/vim-maktaba'
 "Plugin 'bazelbuild/vim-bazel'
 "Plug 'davidhalter/jedi-vim'
 "Plug 'Valloric/YouCompleteMe', { 'do': 'python install.py --clang-completer'}
 " All of your Plugins must be added before the following line
+Plugin 'vimwiki/vimwiki'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -54,38 +67,38 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 syntax on "自动语法高亮
-"winpos 5 5          " 设定窗口位置  
-"set lines=40 columns=155    " 设定窗口大小  
-set nu              " 显示行号  
-set go=             " 不要图形按钮  
-"color asmanian2     " 设置背景主题  
-"set guifont=Courier_New:h10:cANSI   " 设置字体  
-"syntax on           " 语法高亮  
-"autocmd InsertLeave * se nocul  " 用浅色高亮当前行  
-"autocmd InsertEnter * se cul    " 用浅色高亮当前行  
-set ruler           " 显示标尺  
-set showcmd         " 输入的命令显示出来，看的清楚些  
-"set cmdheight=1     " 命令行（在状态行下）的高度，设置为1  
-"set whichwrap+=<,>,h,l   " 允许backspace和光标键跨越行边界(不建议)  
-"set scrolloff=3     " 光标移动到buffer的顶部和底部时保持3行距离  
-set novisualbell    " 不要闪烁(不明白)  
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}   "状态行显示的内容  
-set laststatus=1    " 启动显示状态行(1),总是显示状态行(2)  
-set foldenable      " 允许折叠  
-set foldmethod=manual   " 手动折叠  
-"set background=dark "背景使用黑色 
-set nocompatible  "去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限  
+"winpos 5 5          " 设定窗口位置
+"set lines=40 columns=155    " 设定窗口大小
+set nu              " 显示行号
+set go=             " 不要图形按钮
+"color asmanian2     " 设置背景主题
+"set guifont=Courier_New:h10:cANSI   " 设置字体
+"syntax on           " 语法高亮
+"autocmd InsertLeave * se nocul  " 用浅色高亮当前行
+"autocmd InsertEnter * se cul    " 用浅色高亮当前行
+set ruler           " 显示标尺
+set showcmd         " 输入的命令显示出来，看的清楚些
+"set cmdheight=1     " 命令行（在状态行下）的高度，设置为1
+"set whichwrap+=<,>,h,l   " 允许backspace和光标键跨越行边界(不建议)
+"set scrolloff=3     " 光标移动到buffer的顶部和底部时保持3行距离
+set novisualbell    " 不要闪烁(不明白)
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}   "状态行显示的内容
+set laststatus=1    " 启动显示状态行(1),总是显示状态行(2)
+set foldenable      " 允许折叠
+set foldmethod=manual   " 手动折叠
+"set background=dark "背景使用黑色
+set nocompatible  "去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限
 " 显示中文帮助
 if version >= 603
 	"set helplang=cn
 	set encoding=utf-8
 endif
 " 设置配色方案
-colorscheme molokai
-"字体 
-if (has("gui_running")) 
+colorscheme molokai_todo
+"字体
+if (has("gui_running"))
 	set guifont=Ubuntu\ Mono\ 18
-endif 
+endif
 
 "set font=Ubuntu\ Mono\ 18
 
@@ -110,16 +123,16 @@ map! <C-A> <Esc>ggVGY
 map <F12> gg=G
 " 选中状态下 Ctrl+c 复制
 vmap <C-c> "+y
-"去空行  
-nnoremap <F2> :g/^\s*$/d<CR> 
-"比较文件  
-nnoremap <C-F2> :vert diffsplit 
-"新建标签  
-map <M-F2> :tabnew<CR>  
-"列出当前目录文件  
-map <F3> :tabnew .<CR>  
-"打开树状文件目录  
-map <C-F3> \be  
+"去空行
+nnoremap <F2> :g/^\s*$/d<CR>
+"比较文件
+nnoremap <C-F2> :vert diffsplit
+"新建标签
+map <M-F2> :tabnew<CR>
+"列出当前目录文件
+map <F3> :tabnew .<CR>
+"打开树状文件目录
+map <C-F3> \be
 "C，C++ 按F5编译运行
 "map <F5> :call CompileRunGcc()<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -130,13 +143,13 @@ set autoread
 au CursorHold * checktime
 " quickfix模式
 "autocmd FileType c,cpp map <buffer> <leader><space> :w<cr>:make<cr>
-"代码补全 
-set completeopt=preview,menu 
-"允许插件  
+"代码补全
+set completeopt=preview,menu
+"允许插件
 filetype plugin on
-"共享剪贴板  
-set clipboard+=unnamed 
-"从不备份  
+"共享剪贴板
+set clipboard+=unnamed
+"从不备份
 set nobackup
 "make 运行
 :set makeprg=g++\ -Wall\ \ %
@@ -151,8 +164,8 @@ set guioptions-=m           " 隐藏菜单栏
 "set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c:%l/%L%)\
 " 设置在状态行显示的信息
 set foldcolumn=0
-set foldmethod=indent 
-set foldlevel=3 
+set foldmethod=indent
+set foldlevel=3
 set foldenable              " 开始折叠
 " 不要使用vi的键盘模式，而是vim自己的
 set nocompatible
@@ -250,26 +263,27 @@ set smartindent
 "return a:char
 "endif
 "endfunction
-filetype plugin indent on 
+filetype plugin indent on
 "打开文件类型检测, 加了这句才可以用智能补全
 set completeopt=longest,menu
 
 inoremap qq <ESC>
+nnoremap qq <ESC>
 "inoremap <S-Space> <ESC>
 nnoremap <C-p> :bp<CR>
 nnoremap <C-n> :bn<CR>
 nnoremap <leader><space> :nohl<CR>
-call plug#begin('~/.vim/plugged')
+"call plug#begin('~/.vim/plugged')
 
 "Plug 'altercation/vim-colors-solarized'
 "Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 "Plug 'scrooloose/nerdcommenter'
 "Plug 'bling/vim-airline'
-Plug 'google/vim-maktaba'
-Plug 'bazelbuild/vim-bazel'
+"Plug 'google/vim-maktaba'
+"Plug 'bazelbuild/vim-bazel'
 ""Plug 'davidhalter/jedi-vim'
 ""Plug 'Valloric/YouCompleteMe', { 'do': 'python install.py --clang-completer'}
-call plug#end()
+"call plug#end()
 
 nnoremap <CR> o<Esc>
 map <F10> :NERDTreeToggle<CR>
@@ -277,8 +291,8 @@ map <F10> :NERDTreeToggle<CR>
 let g:ycm_server_python_interpreter='/usr/bin/python'
 let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
 
-let g:SuperTabDefaultCompletionType = "context"  
-let g:jedi#popup_on_dot = 0  
+let g:SuperTabDefaultCompletionType = "context"
+let g:jedi#popup_on_dot = 0
 
 
 "let g:formatterpath = ['/some/path/to/a/folder', '/home/superman/formatters']
@@ -288,7 +302,7 @@ noremap <leader>af :Autoformat<CR>
 let g:SimpylFold_docstring_preview = 1
 
 if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
+	let g:airline_symbols = {}
 endif
 " unicode symbols
 let g:airline_left_sep = '»'
@@ -310,3 +324,70 @@ let g:airline_symbols.spell = 'Ꞩ'
 let g:airline_symbols.notexists = '∄'
 let g:airline_symbols.whitespace = 'Ξ'
 
+nnoremap <leader>so :source ~/.vimrc<cr>
+
+function! g:ToggleNuMode()
+	if &rnu == 0
+		set rnu
+	else
+		set nornu
+	endif
+endfunction
+nnoremap <silent><C-L> :call g:ToggleNuMode()<cr>
+set showcmd
+let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'python':1 }
+let g:ycm_show_diagnostics_ui = 0
+let g:vimwiki_autowriteall = 1
+
+" vimwiki - Personal Wiki for Vim
+" https://github.com/vimwiki/vimwiki
+set nocompatible
+
+filetype plugin on
+syntax on
+" vimwiki with markdown support
+" let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
+let g:vimwiki_ext2syntax = {'.vw': 'markdown'}
+" helppage -> :h vimwiki-syntax
+
+" vim-instant-markdown - Instant Markdown previews from Vim
+" https://github.com/suan/vim-instant-markdown
+let g:instant_markdown_autostart = 0	" disable autostart
+map <leader>md :InstantMarkdownPreview<CR>
+
+"--------------------------------------------------------------------------
+"vim-airline
+"--------------------------------------------------------------------------
+" Plugin 'vim-airline'
+" let g:airline_theme="molokai"
+
+"这个是安装字体后 必须设置此项"
+let g:airline_powerline_fonts = 1
+
+"打开tabline功能,方便查看Buffer和切换,省去了minibufexpl插件
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+
+"设置切换Buffer快捷键"
+nnoremap <C-tab> :bn<CR>
+nnoremap <C-s-tab> :bp<CR>
+" 关闭状态显示空白符号计数
+" let g:airline#extensions#whitespace#enabled = 0
+" let g:airline#extensions#whitespace#symbol = '!'
+" 设置consolas字体"前面已经设置过
+"set guifont=Consolas\ for\ Powerline\ FixedD:h11
+" if !exists('g:airline_symbols')
+"   let g:airline_symbols = {}
+" endif
+" old vim-powerline symbols
+" let g:airline_left_sep = '⮀'
+" let g:airline_left_alt_sep = '⮁'
+" let g:airline_right_sep = '⮂'
+" let g:airline_right_alt_sep = '⮃'
+" let g:airline_symbols.branch = '⭠'
+" let g:airline_symbols.readonly = '⭤'
+let Tlist_Show_One_File=1     "不同时显示多个文件的tag，只显示当前文件的    
+let Tlist_Exit_OnlyWindow=1   "如果taglist窗口是最后一个窗口，则退出vim   
+let Tlist_Ctags_Cmd="$HOME/bin/ctags" "将taglist与ctags关联  
+map <F12> :Tlist<CR>
+set foldlevelstart=20
