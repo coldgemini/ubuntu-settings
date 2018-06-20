@@ -1,0 +1,118 @@
+x 2018-03-05 2018-03-03 train ssd +peds
+x 2018-03-05 2018-03-03 port ssd to ncnn +peds
+x 2018-03-05 2018-03-03 time ncnn ssd +peds
+x 2018-03-07 2018-03-03 caffe ssd test/benchmark +peds
+x 2018-03-05 2018-03-05 ssd modify anchor sizes
+x 2018-03-05 2018-03-05 compute image mean
+x 2018-03-07 compute image mean for input data
+x 2018-03-19 net surgery to remove unused categories
+x 2018-03-19 2018-03-07 merge people categories for small sized ssd
+x 2018-03-23 draw map curve for people detection
+x 2018-05-02 train sphereface
+x 2018-05-02 gen pair list for MsCeleb1M
+x 2018-05-02 yolo v3
+x 2018-05-02 fixed point/unit8 cnn implementation
+x 2018-05-02 binary xnor.ai cnn implementation
+x 2018-05-02 arm platform deploy framework
+x 2018-05-02 imagenet pretrain prepare
+x 2018-05-02 remove side face
+x 2018-04-14 add centorloss to sphereface
+x 2018-05-02 compile tensorflow-gpu
+x 2018-05-02 compile tflite on rk3399
+(D) quantization flow on PC
+
+x 2018-05-02 check sphereface model in face_api c++
+
+x 2018-05-07 align classify crop
+x 2018-05-08 segmentation try 50 layer drn
+x 2018-05-08 segmentation train on PG data, try 128x128, 256x256
+
+x 2018-05-08 pg output heatmap
+
+x 2018-05-12 pg alignment +PG
+x 2018-05-14 pg statistics
+
+(B) face_api bug fix
+
+x 2018-05-09 git check in all projects: drn 
+(C) projects documentation
+
+x 2018-05-25 add tracking
+
+(B) fix pedestrian detection time lag
+
+x 2018-05-31 xorg memory issue
+
+x 2018-05-09 vim jedi-vim
+
+x 2018-05-31 DL flow:	1. detection; 2. tracking; 3. segmentation 4. GAN
+
+x 2018-05-15 GAN for pseudo-defects
+
+doxygen
+
+UML
+
+x 2018-05-14 train solder using densenet165 +Solder
+
+x 2018-05-14 bottom statistics
+
+x 2018-05-12 todo format
+
+x 2018-05-25 zshrc
+
+x 2018-05-14 vimwiki
+x 2018-05-14 fugitive
+x 2018-05-14 textobject
+x 2018-05-14 commenter
+x 2018-05-14 tpope
+x 2018-05-25 urxvt source code powerline
+x 2018-05-14 paste from clipboard
+x 2018-05-15 nm-l2tpd
+x 2018-05-14 vimrc
+x 2018-05-14 git aliases
+x 2018-05-25 docker VPN
+
+x 2018-05-25 denoising auto encoder
+
+x 2018-05-25 pg project circle icp
+
+(F) tracker return bbox location relative to input bbox
+
+x 2018-06-08 make oversolder data
+x 2018-06-08 tf lr schedule
+x 2018-05-31 tf save schedule
+x 2018-05-31 tf-record
+x 2018-06-06 optimizer change
+x 2018-05-31 global pooling
+x 2018-06-06 image color averaging
+x 2018-05-31 tf print network shape
+tf acc
+x 2018-06-08 tf val
+x 2018-06-08 tf test
+x 2018-06-08 tf checkpoint
+x 2018-06-08 tf finetune
+
+(A) tf quantize
+
+tf-deeplab-resnet
+
+(A) tensorflow models cifar multi-gpu scripts
+
+x 2018-06-20 styletransfer
+x 2018-06-20 pix2pix
+x 2018-06-20 infogan
+x 2018-06-20 cyclegan
+x 2018-06-20 dualgan
+x 2018-06-20 discogan
+x 2018-06-20 caae
+
+x 2018-06-20 feature extraction
+x 2018-06-20 aging face effect
+
+x 2018-06-20 random curve generation
+
+x 2018-06-20 gtest
+
+nethogs
+bmon
