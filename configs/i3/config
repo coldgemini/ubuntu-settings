@@ -1,3 +1,5 @@
+gaps inner 10
+gaps outer 10
 #xprop click on window to get Class
 for_window [class="^.*"] border pixel 1
 new_window 1pixel
@@ -257,3 +259,7 @@ bindsym $mod+Shift+z exec /usr/bin/zeal
 #bindsym $mod+Shift+g exec /usr/bin/gimp
 bindsym $mod+Shift+g exec flatpak run org.gimp.GIMP
 bindsym $mod+Tab workspace back_and_forth
+
+bindsym $mod+x exec i3lock
+bindsym $mod+p exec /home/xiang/.i3/i3lock-fancy-multimonitor/lock
+
