@@ -1,5 +1,5 @@
 gaps inner 10
-gaps outer 10
+gaps outer 1
 #xprop click on window to get Class
 for_window [class="^.*"] border pixel 1
 new_window 1pixel
