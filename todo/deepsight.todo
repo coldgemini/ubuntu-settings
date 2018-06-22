@@ -19,7 +19,7 @@ x 2018-05-02 remove side face
 x 2018-04-14 add centorloss to sphereface
 x 2018-05-02 compile tensorflow-gpu
 x 2018-05-02 compile tflite on rk3399
-(D) quantization flow on PC
+x 2018-06-21 quantization flow on PC
 
 x 2018-05-02 check sphereface model in face_api c++
 
@@ -32,10 +32,10 @@ x 2018-05-08 pg output heatmap
 x 2018-05-12 pg alignment +PG
 x 2018-05-14 pg statistics
 
-(B) face_api bug fix
+x 2018-06-21 face_api bug fix
 
 x 2018-05-09 git check in all projects: drn 
-(C) projects documentation
+x 2018-06-21 projects documentation
 
 x 2018-05-25 add tracking
 
@@ -77,7 +77,7 @@ x 2018-05-25 denoising auto encoder
 
 x 2018-05-25 pg project circle icp
 
-(F) tracker return bbox location relative to input bbox
+x 2018-06-21 tracker return bbox location relative to input bbox
 
 x 2018-06-08 make oversolder data
 x 2018-06-08 tf lr schedule
@@ -93,7 +93,7 @@ x 2018-06-08 tf test
 x 2018-06-08 tf checkpoint
 x 2018-06-08 tf finetune
 
-(A) tf quantize
+x 2018-06-21 tf quantize
 
 tf-deeplab-resnet
 
@@ -117,3 +117,10 @@ x 2018-06-20 gtest
 nethogs
 bmon
 iftop
+
+x 2018-06-21 tf c++ interface
+x 2018-06-21 tf transform graph toco
+
+slam, orbslam, ptam, dtam, okvis, lsdslam, ekf, ransac
+ROS
+valgrind
