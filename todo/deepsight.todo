@@ -124,3 +124,6 @@ x 2018-06-21 tf transform graph toco
 slam, orbslam, ptam, dtam, okvis, lsdslam, ekf, ransac
 ROS
 valgrind
+
+dataset management:
+	keep data, track data manipulation scripts and dataset description
