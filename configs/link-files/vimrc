@@ -33,7 +33,12 @@ Plugin 'fholgado/minibufexpl.vim'
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'bling/vim-airline'
+Plugin 'google/vim-maktaba'
+Plugin 'bazelbuild/vim-bazel'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -253,14 +258,6 @@ set completeopt=longest,menu
 inoremap qq <ESC>
 nnoremap <C-p> :bp<CR>
 nnoremap <C-n> :bn<CR>
-call plug#begin('~/.vim/plugged')
-
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'scrooloose/nerdcommenter'
-Plug 'bling/vim-airline'
-Plug 'google/vim-maktaba'
-Plug 'bazelbuild/vim-bazel'
-call plug#end()
 
 nnoremap <CR> o<Esc>
 map <F10> :NERDTreeToggle<CR>
