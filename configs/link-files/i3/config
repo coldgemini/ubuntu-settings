@@ -36,8 +36,8 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec urxvt
-# bindsym $mod+Return exec gnome-terminal
+# bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec gnome-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -145,6 +145,7 @@ bindsym $mod+Shift+9 workspace 9:S9CMD
 bindsym $mod+Shift+0 workspace 0:S0CMD
 bindsym $mod+Ctrl+t workspace TMP
 bindsym $mod+Ctrl+x workspace TMPX
+bindsym $mod+Ctrl+k workspace TASK
 bindsym $mod+Ctrl+z workspace ZEAL
 bindsym $mod+Ctrl+d workspace DOCS
 bindsym $mod+Ctrl+w workspace WEB
@@ -153,6 +154,7 @@ bindsym $mod+Ctrl+n workspace NOTE
 bindsym $mod+Ctrl+a workspace AUDIO
 bindsym $mod+Ctrl+v workspace VIDEO
 bindsym $mod+Ctrl+b workspace VBOX
+bindsym $mod+Ctrl+Shift+w move container to workspace WEB
 bindsym $mod+Ctrl+Shift+1 workspace CODE1
 bindsym $mod+Ctrl+Shift+2 workspace CODE2
 bindsym $mod+Ctrl+Shift+3 workspace CODE3
@@ -183,9 +185,9 @@ for_window [class="^i3f*"] floating enable
 
 # Open applications on specific workspaces
 #assign [class="URxvt"] $ws1
-assign [class="google-chrome"] 7:7BWR
-assign [class="Firefox"] 7:7BWR
-assign [class="netease-cloud-music"] workspace 8:8MED
+assign [class="google-chrome"] WEB
+assign [class="Firefox"] WEB
+assign [class="netease-cloud-music"] workspace AUDIO
 #assign [class="/usr/bin/code"] workspace 3:3CODE
 # assign [class="Skype"] $ws5
 
@@ -205,10 +207,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 20 px or 20 ppt
-        bindsym k resize grow height 20 px or 20 ppt
-        bindsym l resize shrink height 20 px or 20 ppt
-        bindsym semicolon resize grow width 20 px or 20 ppt
+        bindsym j resize shrink width 5 px or 5 ppt
+        bindsym k resize grow height 5 px or 5 ppt
+        bindsym l resize shrink height 5 px or 5 ppt
+        bindsym semicolon resize grow width 5 px or 5 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 2 px or 2 ppt
@@ -260,5 +262,24 @@ bindsym $mod+Shift+z exec /usr/bin/zeal
 bindsym $mod+Shift+g exec flatpak run org.gimp.GIMP
 bindsym $mod+Tab workspace back_and_forth
 
-bindsym $mod+x exec i3lock
-bindsym $mod+p exec /home/xiang/.i3/i3lock-fancy-multimonitor/lock
+# bindsym $mod+x exec i3lock
+# bindsym $mod+p exec /home/xiang/.i3/i3lock-fancy-multimonitor/lock
+bindsym $mod+p exec /home/xiang/Src/i3lock-fancy/lock
+# bindsym $mod+F12	[instance="gnome-terminal" title="Life"] scratchpad show
+# bindsym $mod+q scratchpad show
+# exec --no-startup-id urxvt -T "Life"
+# for_window [instance="urxvt" title="Life"] floating enable, move scratchpad, scratchpad show;
+# for_window [instance="urxvt" title="Life"] resize grow left 300, resize grow right 300, resize grow down 150, resize grow up 100, move scratchpad;
+# bindsym Menu  [instance="urxvt" title="Life"] scratchpad show
+# bindsym Print [instance="urxvt" title="Life"] scratchpad show
+# exec --no-startup-id gnome-terminal -e /bin/bash -l KJ -T "Life"
+# exec --no-startup-id gnome-terminal -e /bin/bash -T "Life"
+exec --no-startup-id gnome-terminal -e /bin/bash
+# exec urxvt -e /bin/bash
+# for_window [instance="Gnome-terminal" title="Life"] floating enable, move scratchpad, scratchpad show;
+# for_window [title="Life"] floating enable, move scratchpad, scratchpad show;
+# for_window [Class="Gnome-terminal" Title="Life"] floating enable, move scratchpad, scratchpad show;
+# for_window [instance="gnome-terminal-server" title="Life"] floating enable, move scratchpad, scratchpad show;
+# for_window [instance="gnome-terminal-server"] floating enable, move scratchpad, scratchpad show;
+bindsym $mod+Shift+BackSpace move scratchpad
+bindsym $mod+backslash scratchpad show

@@ -1,1 +1,1 @@
-/home/xiang/Workbench/VimTodo/ftplugin/todo.vim
+/home/xiang/Src/VimTodo/ftplugin/todo.vim
