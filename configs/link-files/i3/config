@@ -154,6 +154,7 @@ bindsym $mod+Ctrl+n workspace NOTE
 bindsym $mod+Ctrl+a workspace AUDIO
 bindsym $mod+Ctrl+v workspace VIDEO
 bindsym $mod+Ctrl+b workspace VBOX
+bindsym $mod+Ctrl+m workspace MAIL
 bindsym $mod+Ctrl+Shift+w move container to workspace WEB
 bindsym $mod+Ctrl+Shift+1 workspace CODE1
 bindsym $mod+Ctrl+Shift+2 workspace CODE2
@@ -180,6 +181,7 @@ bindsym $mod+Ctrl+Shift+0 workspace CODE0
 
 #open in floating mode
 for_window [class="Eog"] floating enable
+for_window [class="Display"] floating enable
 for_window [class="Mask"] floating enable
 for_window [class="^i3f*"] floating enable
 
@@ -283,3 +285,4 @@ exec --no-startup-id gnome-terminal -e /bin/bash
 # for_window [instance="gnome-terminal-server"] floating enable, move scratchpad, scratchpad show;
 bindsym $mod+Shift+BackSpace move scratchpad
 bindsym $mod+backslash scratchpad show
+bindsym $mod+Print exec gnome-screenshot -i
