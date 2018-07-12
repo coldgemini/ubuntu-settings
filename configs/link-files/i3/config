@@ -278,7 +278,6 @@ bindsym $mod+Ctrl+Left workspace prev
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+bracketleft workspace prev
 bindsym $mod+bracketright workspace next
-
 # bindsym $mod+x exec i3lock
 # bindsym $mod+p exec /home/xiang/.i3/i3lock-fancy-multimonitor/lock
 bindsym $mod+p exec /home/xiang/Src/i3lock-fancy/lock
