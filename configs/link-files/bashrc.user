@@ -78,6 +78,11 @@ mailfile() {
 alias i3prop=/home/xiang/Dev/scripts/i3/i3-get-window-criteria
 alias trdn="tr -d '\n'"
 
+set-title(){
+	ORIG=$PS1
+	TITLE="\e]2;$@\a"
+	PS1=${ORIG}${TITLE}
+}
 alias rm=trash-put
 alias a='fasd -a'        # any
 alias s='fasd -si'       # show / search / select

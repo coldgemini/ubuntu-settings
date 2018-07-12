@@ -123,48 +123,48 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 0
-bindsym $mod+Ctrl+1 workspace C1
-bindsym $mod+Ctrl+2 workspace C2
-bindsym $mod+Ctrl+3 workspace C3
-bindsym $mod+Ctrl+4 workspace C4
-bindsym $mod+Ctrl+5 workspace C5
-bindsym $mod+Ctrl+6 workspace C6
-bindsym $mod+Ctrl+7 workspace C7
-bindsym $mod+Ctrl+8 workspace C8
-bindsym $mod+Ctrl+9 workspace C9
-bindsym $mod+Ctrl+0 workspace C0
-bindsym $mod+Shift+1 workspace S1
-bindsym $mod+Shift+2 workspace S2
-bindsym $mod+Shift+3 workspace S3
-bindsym $mod+Shift+4 workspace S4
-bindsym $mod+Shift+5 workspace S5
-bindsym $mod+Shift+6 workspace S6
-bindsym $mod+Shift+7 workspace S7
-bindsym $mod+Shift+8 workspace S8
-bindsym $mod+Shift+9 workspace S9
-bindsym $mod+Shift+0 workspace S0
+bindsym $mod+Ctrl+1 workspace 1
+bindsym $mod+Ctrl+2 workspace 2
+bindsym $mod+Ctrl+3 workspace 3
+bindsym $mod+Ctrl+4 workspace 4
+bindsym $mod+Ctrl+5 workspace 5
+bindsym $mod+Ctrl+6 workspace 6
+bindsym $mod+Ctrl+7 workspace 7
+bindsym $mod+Ctrl+8 workspace 8
+bindsym $mod+Ctrl+9 workspace 9
+bindsym $mod+Ctrl+0 workspace 0
+bindsym $mod+Shift+1 workspace 1
+bindsym $mod+Shift+2 workspace 2
+bindsym $mod+Shift+3 workspace 3
+bindsym $mod+Shift+4 workspace 4
+bindsym $mod+Shift+5 workspace 5
+bindsym $mod+Shift+6 workspace 6
+bindsym $mod+Shift+7 workspace 7
+bindsym $mod+Shift+8 workspace 8
+bindsym $mod+Shift+9 workspace 9
+bindsym $mod+Shift+0 workspace 0
 bindsym $mod+Ctrl+t workspace TMP
-bindsym $mod+Ctrl+r workspace RUN
-bindsym $mod+Ctrl+c workspace CODE
+bindsym $mod+Ctrl+r workspace RUN
+bindsym $mod+Ctrl+c workspace CODE
 #bindsym $mod+Ctrl+x workspace TMPX
 bindsym $mod+Ctrl+k workspace TASK
 bindsym $mod+Ctrl+z workspace ZEAL
 bindsym $mod+Ctrl+d workspace DOCS
-bindsym $mod+Ctrl+u workspace BAIDU
-bindsym $mod+Ctrl+w workspace GOOGLE
+bindsym $mod+Ctrl+i workspace InCog
+bindsym $mod+Ctrl+w workspace Chrome
 bindsym $mod+Ctrl+g workspace GIMP
 bindsym $mod+Ctrl+n workspace NOTE
 bindsym $mod+Ctrl+a workspace AUDIO
 bindsym $mod+Ctrl+v workspace VIDEO
-bindsym $mod+Ctrl+b workspace VBOX
+bindsym $mod+Ctrl+o workspace VBOX
 bindsym $mod+Ctrl+m workspace MAIL
 bindsym $mod+Ctrl+f workspace FOLDER
 bindsym $mod+Ctrl+h workspace HOME
 bindsym $mod+Ctrl+p workspace PROX
 bindsym $mod+Ctrl+x workspace WX
 bindsym $mod+Ctrl+s workspace SYS
-#bindsym $mod+Ctrl+x workspace WX
-bindsym $mod+Ctrl+Shift+w move container to workspace WEB
+#bindsym $mod+Ctrl+x workspace RSS
+#bindsym $mod+Ctrl+Shift+w move container to workspace WEB
 bindsym $mod+Ctrl+Shift+1 workspace 1
 bindsym $mod+Ctrl+Shift+2 workspace 2
 bindsym $mod+Ctrl+Shift+3 workspace 3
@@ -197,9 +197,9 @@ for_window [class="^i3f*"] floating enable
 
 # Open applications on specific workspaces
 #assign [class="URxvt"] $ws1
-assign [class="google-chrome"] WEB
-assign [class="Firefox"] WEB
-assign [class="netease-cloud-music"] workspace AUDIO
+#assign [class="google-chrome"] workspace GOOGLE
+#assign [class="Firefox"] workspace FIREFOX
+assign [class="netease-cloud-music"] workspace AUDIO
 #assign [class="/usr/bin/code"] workspace 3:3CODE
 # assign [class="Skype"] $ws5
 
@@ -265,6 +265,7 @@ exec --no-startup-id nm-applet
 #exec --no-startup-id feh --bg-scale /usr/share/backgrounds/Cielo_estrellado_by_Eduardo_Diez_Viñuela.jpg
 exec --no-startup-id feh --bg-scale $HOME/Pictures/background.jpg
 bindsym $mod+Shift+w exec /usr/bin/google-chrome
+bindsym $mod+Shift+Ctrl+w exec /usr/bin/google-chrome --incognito --new-window
 bindsym $mod+Shift+f exec /usr/bin/firefox
 bindsym $mod+Shift+m exec /usr/bin/code -n
 bindsym $mod+Shift+u exec /usr/bin/netease-cloud-music
@@ -275,6 +276,8 @@ bindsym $mod+Shift+g exec flatpak run org.gimp.GIMP
 bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Ctrl+Left workspace prev
 bindsym $mod+Ctrl+Right workspace next
+bindsym $mod+bracketleft workspace prev
+bindsym $mod+bracketright workspace next
 
 # bindsym $mod+x exec i3lock
 # bindsym $mod+p exec /home/xiang/.i3/i3lock-fancy-multimonitor/lock
@@ -288,9 +291,11 @@ bindsym $mod+p exec /home/xiang/Src/i3lock-fancy/lock
 # bindsym Print [instance="urxvt" title="Life"] scratchpad show
 # exec --no-startup-id gnome-terminal -e /bin/bash -l KJ -T "Life"
 # exec --no-startup-id gnome-terminal -e /bin/bash -T "Life"
-exec --no-startup-id gnome-terminal -e /bin/bash
+#exec --no-startup-id gnome-terminal -e /bin/bash set-title scratchpad
+#exec_always --no-startup-id "gnome-terminal -e /bin/bash set-title scratchpad"
+#exec_always --no-startup-id "gnome-terminal -e ORIG=$PS1;TITLE=\"\e]2;hohoho\a\";PS1=${ORIG}${TITLE}"
 # exec urxvt -e /bin/bash
-# for_window [instance="Gnome-terminal" title="Life"] floating enable, move scratchpad, scratchpad show;
+#for_window [instance="gnome-terminal-server" title="scratchpad"] floating enable, move scratchpad, scratchpad show;
 # for_window [title="Life"] floating enable, move scratchpad, scratchpad show;
 # for_window [Class="Gnome-terminal" Title="Life"] floating enable, move scratchpad, scratchpad show;
 # for_window [instance="gnome-terminal-server" title="Life"] floating enable, move scratchpad, scratchpad show;
@@ -299,3 +304,10 @@ bindsym $mod+Shift+BackSpace move scratchpad
 bindsym $mod+backslash scratchpad show
 bindsym $mod+Print exec gnome-screenshot -i
 bindsym $mod+Insert exec i3-input -F 'rename workspace to "%s"' -P 'Rename workspace: '
+# Start iceweasel on workspace 3, then switch back to workspace 1
+# (Being a command-line utility, i3-msg does not support startup notifications,
+#  hence the exec --no-startup-id.)
+# (Starting iceweasel with i3’s exec command is important in order to make i3
+#  create a startup notification context, without which the iceweasel window(s)
+#  cannot be matched onto the workspace on which the command was started.)
+#exec --no-startup-id i3-msg 'workspace 3; exec iceweasel; workspace 1'
