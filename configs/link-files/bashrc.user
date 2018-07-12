@@ -51,7 +51,7 @@ alias boostnote=/home/xiang/apps/boostnote/usr/share/boostnote/Boostnote
 alias caffe2ncnn=/home/xiang/Workbench/ncnn/build-x86_64/tools/caffe/caffe2ncnn
 export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
 #export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4:/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4:/usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4:/usr/lib/x86_64-linux-gnu/libstdc++.so.6:/usr/lib/x86_64-linux-gnu/libfreetype.so.6
-alias aria2cserver='aria2c --conf-path ../apps/aria2.conf'
+alias aria2cserver='aria2c --conf-path /home/xiang/.config/aria2.conf'
 alias envmatcaffe='source /home/xiang/Documents/Notes/deepsight/matcaffe_env.sh'
 alias rk3399='ssh -Y xiang@rk3399'
 alias rk3288='ssh -Y xiang@rk3288'
@@ -76,6 +76,7 @@ mailfile() {
 #alias gvim=/home/xiang/.local/bin/gvim
 #alias gview=/home/xiang/.local/bin/gview
 alias i3prop=/home/xiang/Dev/scripts/i3/i3-get-window-criteria
+alias trdn="tr -d '\n'"
 
 alias rm=trash-put
 alias a='fasd -a'        # any

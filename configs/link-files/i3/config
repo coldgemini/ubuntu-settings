@@ -1,4 +1,4 @@
-gaps inner 6
+gaps inner 5
 gaps outer 0
 #xprop click on window to get Class
 for_window [class="^.*"] border pixel 0
@@ -113,59 +113,68 @@ bindsym $mod+a focus parent
 #set $ws8 8
 
 # switch to workspace
-bindsym $mod+1 workspace 1:1CMD
-bindsym $mod+2 workspace 2:2CMD
-bindsym $mod+3 workspace 3:3CMD
-bindsym $mod+4 workspace 4:4CMD
-bindsym $mod+5 workspace 5:5CMD
-bindsym $mod+6 workspace 6:6CMD
-bindsym $mod+7 workspace 7:7CMD
-bindsym $mod+8 workspace 8:8CMD
-bindsym $mod+9 workspace 9:9CMD
-bindsym $mod+0 workspace 0:0CMD
-bindsym $mod+Ctrl+1 workspace 1:C1CMD
-bindsym $mod+Ctrl+2 workspace 2:C2CMD
-bindsym $mod+Ctrl+3 workspace 3:C3CMD
-bindsym $mod+Ctrl+4 workspace 4:C4CMD
-bindsym $mod+Ctrl+5 workspace 5:C5CMD
-bindsym $mod+Ctrl+6 workspace 6:C6CMD
-bindsym $mod+Ctrl+7 workspace 7:C7CMD
-bindsym $mod+Ctrl+8 workspace 8:C8CMD
-bindsym $mod+Ctrl+9 workspace 9:C9CMD
-bindsym $mod+Ctrl+0 workspace 0:C0CMD
-bindsym $mod+Shift+1 workspace 1:S1CMD
-bindsym $mod+Shift+2 workspace 2:S2CMD
-bindsym $mod+Shift+3 workspace 3:S3CMD
-bindsym $mod+Shift+4 workspace 4:S4CMD
-bindsym $mod+Shift+5 workspace 5:S5CMD
-bindsym $mod+Shift+6 workspace 6:S6CMD
-bindsym $mod+Shift+7 workspace 7:S7CMD
-bindsym $mod+Shift+8 workspace 8:S8CMD
-bindsym $mod+Shift+9 workspace 9:S9CMD
-bindsym $mod+Shift+0 workspace 0:S0CMD
-bindsym $mod+Ctrl+t workspace TMP
-bindsym $mod+Ctrl+x workspace TMPX
-bindsym $mod+Ctrl+k workspace TASK
-bindsym $mod+Ctrl+z workspace ZEAL
-bindsym $mod+Ctrl+d workspace DOCS
-bindsym $mod+Ctrl+w workspace WEB
-bindsym $mod+Ctrl+g workspace GIMP
-bindsym $mod+Ctrl+n workspace NOTE
-bindsym $mod+Ctrl+a workspace AUDIO
-bindsym $mod+Ctrl+v workspace VIDEO
-bindsym $mod+Ctrl+b workspace VBOX
-bindsym $mod+Ctrl+m workspace MAIL
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 0
+bindsym $mod+Ctrl+1 workspace C1
+bindsym $mod+Ctrl+2 workspace C2
+bindsym $mod+Ctrl+3 workspace C3
+bindsym $mod+Ctrl+4 workspace C4
+bindsym $mod+Ctrl+5 workspace C5
+bindsym $mod+Ctrl+6 workspace C6
+bindsym $mod+Ctrl+7 workspace C7
+bindsym $mod+Ctrl+8 workspace C8
+bindsym $mod+Ctrl+9 workspace C9
+bindsym $mod+Ctrl+0 workspace C0
+bindsym $mod+Shift+1 workspace S1
+bindsym $mod+Shift+2 workspace S2
+bindsym $mod+Shift+3 workspace S3
+bindsym $mod+Shift+4 workspace S4
+bindsym $mod+Shift+5 workspace S5
+bindsym $mod+Shift+6 workspace S6
+bindsym $mod+Shift+7 workspace S7
+bindsym $mod+Shift+8 workspace S8
+bindsym $mod+Shift+9 workspace S9
+bindsym $mod+Shift+0 workspace S0
+bindsym $mod+Ctrl+t workspace TMP
+bindsym $mod+Ctrl+r workspace RUN
+bindsym $mod+Ctrl+c workspace CODE
+#bindsym $mod+Ctrl+x workspace TMPX
+bindsym $mod+Ctrl+k workspace TASK
+bindsym $mod+Ctrl+z workspace ZEAL
+bindsym $mod+Ctrl+d workspace DOCS
+bindsym $mod+Ctrl+u workspace BAIDU
+bindsym $mod+Ctrl+w workspace GOOGLE
+bindsym $mod+Ctrl+g workspace GIMP
+bindsym $mod+Ctrl+n workspace NOTE
+bindsym $mod+Ctrl+a workspace AUDIO
+bindsym $mod+Ctrl+v workspace VIDEO
+bindsym $mod+Ctrl+b workspace VBOX
+bindsym $mod+Ctrl+m workspace MAIL
+bindsym $mod+Ctrl+f workspace FOLDER
+bindsym $mod+Ctrl+h workspace HOME
+bindsym $mod+Ctrl+p workspace PROX
+bindsym $mod+Ctrl+x workspace WX
+bindsym $mod+Ctrl+s workspace SYS
+#bindsym $mod+Ctrl+x workspace WX
 bindsym $mod+Ctrl+Shift+w move container to workspace WEB
-bindsym $mod+Ctrl+Shift+1 workspace CODE1
-bindsym $mod+Ctrl+Shift+2 workspace CODE2
-bindsym $mod+Ctrl+Shift+3 workspace CODE3
-bindsym $mod+Ctrl+Shift+4 workspace CODE4
-bindsym $mod+Ctrl+Shift+5 workspace CODE5
-bindsym $mod+Ctrl+Shift+6 workspace CODE6
-bindsym $mod+Ctrl+Shift+7 workspace CODE7
-bindsym $mod+Ctrl+Shift+8 workspace CODE8
-bindsym $mod+Ctrl+Shift+9 workspace CODE9
-bindsym $mod+Ctrl+Shift+0 workspace CODE0
+bindsym $mod+Ctrl+Shift+1 workspace 1
+bindsym $mod+Ctrl+Shift+2 workspace 2
+bindsym $mod+Ctrl+Shift+3 workspace 3
+bindsym $mod+Ctrl+Shift+4 workspace 4
+bindsym $mod+Ctrl+Shift+5 workspace 5
+bindsym $mod+Ctrl+Shift+6 workspace 6
+bindsym $mod+Ctrl+Shift+7 workspace 7
+bindsym $mod+Ctrl+Shift+8 workspace 8
+bindsym $mod+Ctrl+Shift+9 workspace 9
+bindsym $mod+Ctrl+Shift+0 workspace 0
 
 # move focused container to workspace
 #bindsym $mod+Shift+1 move container to workspace 1:1CMD
@@ -182,6 +191,7 @@ bindsym $mod+Ctrl+Shift+0 workspace CODE0
 #open in floating mode
 for_window [class="Eog"] floating enable
 for_window [class="Display"] floating enable
+for_window [class="mpv"] floating enable
 for_window [class="Mask"] floating enable
 for_window [class="^i3f*"] floating enable
 
@@ -203,26 +213,26 @@ bindsym $mod+Shift+e exec "i3-msg exit"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+# These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 5 px or 5 ppt
-        bindsym k resize grow height 5 px or 5 ppt
-        bindsym l resize shrink height 5 px or 5 ppt
-        bindsym semicolon resize grow width 5 px or 5 ppt
+# Pressing left will shrink the window’s width.
+# Pressing right will grow the window’s width.
+# Pressing up will shrink the window’s height.
+# Pressing down will grow the window’s height.
+	bindsym j resize shrink width 5 px or 5 ppt
+		bindsym k resize grow height 5 px or 5 ppt
+		bindsym l resize shrink height 5 px or 5 ppt
+		bindsym semicolon resize grow width 5 px or 5 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 2 px or 2 ppt
-        bindsym Down resize grow height 2 px or 2 ppt
-        bindsym Up resize shrink height 2 px or 2 ppt
-        bindsym Right resize grow width 2 px or 2 ppt
+# same bindings, but for the arrow keys
+		bindsym Left resize shrink width 2 px or 2 ppt
+		bindsym Down resize grow height 2 px or 2 ppt
+		bindsym Up resize shrink height 2 px or 2 ppt
+		bindsym Right resize grow width 2 px or 2 ppt
 
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+# back to normal: Enter or Escape
+		bindsym Return mode "default"
+		bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -231,22 +241,22 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bindsym $mod+m bar mode toggle
 bar {
-        status_command i3status
-        tray_output primary
+	status_command i3status
+		tray_output primary
 		font xft:Noto Sans 12
-		strip_workspace_numbers yes
+		strip_workspace_numbers no
 
 		colors {
 #       background $transparent
 			background #2B2C2B
-			statusline #F9FAF9
-			separator  #454947
+				statusline #F9FAF9
+				separator  #454947
 
 #                              border  backgr. text
-			focused_workspace  #F9FAF9 #16A085 #2B2C2B
-			active_workspace   #595B5B #353836 #FDF6E3
-			inactive_workspace #595B5B #353836 #EEE8D5
-			urgent_workspace   #16A085 #FDF6E3 #E5201D
+				focused_workspace  #F9FAF9 #16A085 #2B2C2B
+				active_workspace   #595B5B #353836 #FDF6E3
+				inactive_workspace #595B5B #353836 #EEE8D5
+				urgent_workspace   #16A085 #FDF6E3 #E5201D
 		}
 }
 
@@ -258,11 +268,13 @@ bindsym $mod+Shift+w exec /usr/bin/google-chrome
 bindsym $mod+Shift+f exec /usr/bin/firefox
 bindsym $mod+Shift+m exec /usr/bin/code -n
 bindsym $mod+Shift+u exec /usr/bin/netease-cloud-music
-bindsym $mod+Shift+n exec /home/xiang/apps/boostnote/usr/share/boostnote/Boostnote
+#bindsym $mod+Shift+n exec /home/xiang/apps/boostnote/usr/share/boostnote/Boostnote
 bindsym $mod+Shift+z exec /usr/bin/zeal
 #bindsym $mod+Shift+g exec /usr/bin/gimp
 bindsym $mod+Shift+g exec flatpak run org.gimp.GIMP
 bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Ctrl+Left workspace prev
+bindsym $mod+Ctrl+Right workspace next
 
 # bindsym $mod+x exec i3lock
 # bindsym $mod+p exec /home/xiang/.i3/i3lock-fancy-multimonitor/lock
@@ -286,3 +298,4 @@ exec --no-startup-id gnome-terminal -e /bin/bash
 bindsym $mod+Shift+BackSpace move scratchpad
 bindsym $mod+backslash scratchpad show
 bindsym $mod+Print exec gnome-screenshot -i
+bindsym $mod+Insert exec i3-input -F 'rename workspace to "%s"' -P 'Rename workspace: '
