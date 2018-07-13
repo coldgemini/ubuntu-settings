@@ -1,7 +1,7 @@
 alias ll='ls -al'
 alias la='ls -a'
 export BASHRCUSER=true
-alias bashrcuser='source ~/.bashrc.user'
+alias bashrc='source ~/.bashrc.user'
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH
 export PATH=/usr/local/cuda/bin:$PATH
@@ -77,6 +77,7 @@ mailfile() {
 #alias gview=/home/xiang/.local/bin/gview
 alias i3prop=/home/xiang/Dev/scripts/i3/i3-get-window-criteria
 alias trdn="tr -d '\n'"
+alias wklog="localc /home/xiang/Log/seer/WorkLog.xlsx 1>/dev/null 2>/dev/null"
 
 set-title(){
 	ORIG=$PS1
