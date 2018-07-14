@@ -1,5 +1,5 @@
-gaps inner 5
-gaps outer 0
+#gaps inner 5
+#gaps outer 0
 #xprop click on window to get Class
 for_window [class="^.*"] border pixel 0
 new_window 1pixel
@@ -266,6 +266,7 @@ bar {
 		}
 }
 
+exec xrandr --output LVDS-1 --off --output VGA-1 --mode 1920x1080 --primary
 #user setting
 exec --no-startup-id nm-applet
 #exec --no-startup-id feh --bg-scale /usr/share/backgrounds/Cielo_estrellado_by_Eduardo_Diez_Viñuela.jpg
