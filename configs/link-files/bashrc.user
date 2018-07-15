@@ -78,6 +78,8 @@ mailfile() {
 alias i3prop=/home/xiang/Dev/scripts/i3/i3-get-window-criteria
 alias trdn="tr -d '\n'"
 alias wklog="localc /home/xiang/Log/seer/WorkLog.xlsx 1>/dev/null 2>/dev/null"
+alias slack="http_proxy=http://localhost:8123/ slack"
+alias rm=trash-put
 
 set-title(){
 	ORIG=$PS1
