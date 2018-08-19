@@ -81,6 +81,9 @@ alias wklog="localc /home/xiang/Log/seer/WorkLog.xlsx 1>/dev/null 2>/dev/null"
 alias slack="http_proxy=http://localhost:8123/ slack"
 alias rm=trash-put
 
+alias proxyon="export http_proxy='http://YOURPROXY:YOURPORT';export https_proxy='http://YOURPROXY:YOURPORT'"
+alias proxyoff="export http_proxy='';export https_proxy=''"
+
 set-title(){
 	ORIG=$PS1
 	TITLE="\e]2;$@\a"
