@@ -10,7 +10,7 @@
 #输入ssr help 现实帮助信息
 set -e
 if [ -z $EDITOR ];then
-    EDITOR=vim
+    EDITOR=vi
 fi
 
 help() {
