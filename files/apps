@@ -1,3 +1,4 @@
+volumnicon-alsa
 zotero
 vscode
 wps-office
@@ -47,4 +48,13 @@ kdenlive
 steam
 blender
 labyrinth
-
+proxychains
+qt5
+opencv
+pcl
+vtk
+inference engine
+ncnn
+Tengine
+ros
+ubuntu in docker

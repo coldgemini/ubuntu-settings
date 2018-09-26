@@ -73,16 +73,19 @@ mailfile() {
 
 #export http_proxy=”127.0.0.1:8123”
 #export https_proxy=”127.0.0.1:8123”
+# alias proxy="export http_proxy=http://127.0.0.1:8123"
+# alias noproxy="unset http_proxy"
 #alias vim=/home/xiang/.local/bin/vim
 #alias view=/home/xiang/.local/bin/view
 #alias gvim=/home/xiang/.local/bin/gvim
 #alias gview=/home/xiang/.local/bin/gview
 alias i3prop=/home/xiang/Dev/scripts/i3/i3-get-window-criteria
 alias trdn="tr -d '\n'"
+alias cpxclip="tr -d '\n' | xclip -selection -c"
 alias nonl="tr -d '\n'"
 alias wklog="localc /home/xiang/Log/seer/WorkLog.xlsx 1>/dev/null 2>/dev/null"
 alias slack="http_proxy=http://localhost:8123/ slack"
-alias proxyon="export http_proxy='http://YOURPROXY:YOURPORT';export https_proxy='http://YOURPROXY:YOURPORT'"
+alias proxyon="export http_proxy='http://localhost:8123';export https_proxy='http://localhost:8123'"
 alias proxyoff="export http_proxy='';export https_proxy=''"
 
 set-title(){

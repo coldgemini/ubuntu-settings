@@ -248,6 +248,10 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bindsym $mod+m bar mode toggle
+# bar {
+# 	font pango:Inconsolata 10
+# 	status_command /home/xiang/Src/bumblebee-status/bumblebee-status  -m nic disk:root cpu memory datetime -t gruvbox-light
+# }
 bar {
 	status_command i3status
 		tray_output primary
@@ -334,3 +338,4 @@ bindsym XF86AudioMute exec amixer -q set Master toggle
 bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 10
 bindsym $mod+Shift+Escape exec xscreensaver-command -activate
+bindsym $mod+Ctrl+e exec "i3-msg open"

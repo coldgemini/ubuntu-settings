@@ -9,3 +9,10 @@ docker port container_name 22
 
 docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
+
+docker search
+docker pull
+docker info
+
+docker run -i -t ubuntu /bin/bash
+docker run -d ubuntu
