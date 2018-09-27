@@ -201,7 +201,7 @@ for_window [class="Eog"] floating enable
 for_window [class="Display"] floating enable
 for_window [class="mpv"] floating enable
 for_window [class="Mask"] floating enable
-for_window [class="feh"] floating enable
+for_window [class="feh"] floating enable move absolute position center
 for_window [class="^i3f*"] floating enable
 
 # Open applications on specific workspaces

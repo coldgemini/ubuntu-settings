@@ -1,0 +1,2 @@
+feh --action1 "mv $PWD/%F tmp" .
+feh --action1 "mv $PWD/%F tmp" --action2 "mv $PWD/%F tmp1" .
