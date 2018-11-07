@@ -132,7 +132,7 @@ map <C-F3> \be
 " 设置当文件被改动时自动载入
 set autoread
 " quickfix模式
-autocmd FileType c,cpp map <buffer> <leader><space> :w<cr>:make<cr>
+"autocmd FileType c,cpp map <buffer> <leader><space> :w<cr>:make<cr>
 "代码补全
 set completeopt=preview,menu
 "允许插件
@@ -286,9 +286,13 @@ nnoremap <leader>so :source ~/.vimrc<cr>
 ":augroup END
 set showcmd
 "let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'python':1 }
-nnoremap <F4> :Autoformat<CR>
-au BufWrite * :Autoformat
 "let g:autoformat_autoindent = 0
 "let g:autoformat_retab = 0
 "let g:autoformat_remove_trailing_spaces = 0
+"let g:formatter_yapf_style = 'pep8'
+nnoremap <F4> :Autoformat<CR>
+au BufWrite * :Autoformat
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+let g:autoformat_remove_trailing_spaces = 0
 au BufRead * normal zR

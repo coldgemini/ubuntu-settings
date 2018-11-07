@@ -2,7 +2,7 @@
 
 set -e
 
-Todo_Dir=~/todosync
+Todo_Dir=~/.todosync
 
 if [ -z $EDITOR ];then
     EDITOR=vim

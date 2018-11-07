@@ -1,7 +1,9 @@
 alias ll='ls -al'
 alias la='ls -a'
-export BASHRCUSER=true
-alias bashrc='source ~/.bashrc.user'
+alias ls='ls --color=auto -htr'
+alias cat=ccat
+# export BASHRCUSER=true
+# alias bashrc='source ~/.bashrc.user'
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH
 export PATH=/usr/local/cuda/bin:$PATH
@@ -13,27 +15,27 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 export CAFFE_ROOT=/home/$USER/Workbench/caffe
 #export PYTHONPATH
-alias addpycaffe='export PYTHONPATH=$CAFFE_ROOT/python:$PYTHONPATH'
-alias py3path='export PYTHONPATH=/home/$USER/.local/lib/python3.5/site-packages:$PYTHONPATH'
-alias py2path='export PYTHONPATH=/home/$USER/.local/lib/python2.7/site-packages:$PYTHONPATH'
-alias matlab='/home/$USER/MATLAB/R2017b/bin/matlab'
-alias matlabnojvm='/home/$USER/MATLAB/R2017b/bin/matlab -nojvm -nosplash'
-alias matlabnodisplay='/home/$USER/MATLAB/R2017b/bin/matlab -nodisplay -nosplash'
-alias matlabwin='/home/$USER/MATLAB/R2017b/bin/matlab'
+# alias addpycaffe='export PYTHONPATH=$CAFFE_ROOT/python:$PYTHONPATH'
+#alias py3path='export PYTHONPATH=/home/$USER/.local/lib/python3.5/site-packages:$PYTHONPATH'
+#alias py2path='export PYTHONPATH=/home/$USER/.local/lib/python2.7/site-packages:$PYTHONPATH'
+alias matlab='/usr/local/MATLAB/R2016b/bin/matlab'
+alias matlabnojvm='/usr/local/MATLAB/R2016b/bin/matlab -nojvm -nosplash'
+alias matlabnodisplay='/usr/local/MATLAB/R2016b/bin/matlab -nodisplay -nosplash'
+alias matlabwin='/usr/local/MATLAB/R2016b/bin/matlab'
 alias vsnotes='code /home/$USER/Documents/Notes/deepsight'
-export PYTHONPATH=/home/$USER/Workbench/caffe2/build:$PYTHONPATH
+# export PYTHONPATH=/home/$USER/Workbench/caffe2/build:$PYTHONPATH
 export DETECTRON=/home/$USER/Workbench/Detectron
 alias server1='ssh -Y xiangyong@dsdp001'
 alias server2='ssh -Y xiangyong@dsdp002'
 alias server3='ssh -Y gemini@dsdp003'
 alias server4='ssh -Y xiang@192.168.1.127'
 alias connectnfs='sudo mount -t nfs -o rw,soft,timeo=30,retry=3 192.168.1.104:/var/storage/nfsroot ~/mnt/nfs'
-export PYTHONPATH=/home/$USER/Workbench/keras-retinanet-py3:$PYTHONPATH
+#export PYTHONPATH=/home/$USER/Workbench/keras-retinanet-py3:$PYTHONPATH
 alias dataprocessing='cd /home/$USER/Workbench/Data-Processing'
 alias gonotes='cd /home/$USER/Documents/Notes/deepsight'
 export CALTECHCONV=/home/xiang/Data/caltech-pedestrian-dataset-converter
 export KITTI_TOOLS=/home/xiang/Data/KITTI_SSD/data/KITTI
-export PYTHONPATH=/home/xiang/Data/cocoapi/PythonAPI.maxDet:$PYTHONPATH
+#export PYTHONPATH=/home/xiang/Data/cocoapi/PythonAPI.maxDet:$PYTHONPATH
 alias joblog='code -n /home/xiang/Documents/joblog.md'
 export NCNN=/home/xiang/Workbench/ncnn
 export QQFileRecv="/home/xiang/.wine/drive_c/Program Files/QQ/Users/2596998852/FileRecv"
@@ -45,8 +47,10 @@ alias add-arm-runtime='export LD_LIBRARY_PATH=/home/xiang/Workbench/linaro/lates
 export OPENCV_ARM=/home/xiang/Downloads/tmp/opencv-3.3.1/platforms/linux/build
 alias gpic=gpicview
 #alias netease-cloud-music=/home/xiang/apps/netease-cloud-music/usr/bin/netease-cloud-music
-alias addssdpycaffe='export PYTHONPATH=/home/xiang/Workbench/caffe-ssd/build/install/python:$PYTHONPATH'
+#alias addssdpycaffe='export PYTHONPATH=/home/xiang/Workbench/caffe-ssd/build/install/python:$PYTHONPATH'
+alias trdn="tr -d '\n'"
 alias cpxclip='xclip -selection -c'
+alias scpxclip='trdn | cpxclip'
 alias boostnote=/home/xiang/apps/boostnote/usr/share/boostnote/Boostnote
 alias caffe2ncnn=/home/xiang/Workbench/ncnn/build-x86_64/tools/caffe/caffe2ncnn
 export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
@@ -69,21 +73,36 @@ mailfile() {
 	echo "sending attachment from xatom" | mail -s "attachment from xatom" -A $1 coldgemini@foxmail.com
 }
 
-#export http_proxy=”127.0.0.1:8123”
-#export https_proxy=”127.0.0.1:8123”
+#export http_proxy="127.0.0.1:8123"
+#export https_proxy="127.0.0.1:8123"
 #alias vim=/home/xiang/.local/bin/vim
 #alias view=/home/xiang/.local/bin/view
 #alias gvim=/home/xiang/.local/bin/gvim
 #alias gview=/home/xiang/.local/bin/gview
+alias dfh='df -h'
+alias gdf='git diff'
+alias gst='git status'
+alias gps='git push'
+alias gpl='git pull'
+alias gcm='git commit -a'
+alias gco='git checkout'
+alias gbr='git branch -a'
+alias grs='git reset'
+alias gcf='git config --global'
+alias gcl='git clone'
+alias gad='git add'
+#alias gap='git config --global http.proxy=socks5://192.168.1.51:3333'
+#alias gdp='git config --global --unset http.proxy'
 alias i3prop=/home/xiang/Dev/scripts/i3/i3-get-window-criteria
-alias trdn="tr -d '\n'"
 alias wklog="localc /home/xiang/Log/seer/WorkLog.xlsx 1>/dev/null 2>/dev/null"
 
+export BOTO_PATH=~/.boto
 set-title(){
 	ORIG=$PS1
 	TITLE="\e]2;$@\a"
 	PS1=${ORIG}${TITLE}
 }
+#alias reallyrm=rm
 alias rm=trash-put
 alias a='fasd -a'        # any
 alias s='fasd -si'       # show / search / select
@@ -94,3 +113,10 @@ alias sf='fasd -sif'     # interactive file selection
 alias z='fasd_cd -d'     # cd, same functionality as j in autojump
 alias zz='fasd_cd -d -i' # cd with interactive selection
 eval "$(fasd --init auto)"
+
+#source /opt/ros/kinetic/setup.bash
+# source /opt/ros/lunar/setup.bash
+source /opt/ros/kinetic/setup.bash
+alias cmakegen='cmake -H. -Bbuild'
+alias cmakebuild='cmake --build build'
+alias cmakeinstall='cmake --build build --target install'
