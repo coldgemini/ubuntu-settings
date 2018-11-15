@@ -274,6 +274,10 @@ bar {
 #user setting
 exec_always --no-startup-id nm-applet --sm-disable
 exec_always --no-startup-id volumeicon
+exec_always --no-startup-id blueman-applet
+#exec_always --no-startup-id classicmenu-indicator
+#exec_always --no-startup-id indicator-diskman
+#exec_always --no-startup-id indicator-china-weather
 #exec --no-startup-id feh --bg-scale /usr/share/backgrounds/Cielo_estrellado_by_Eduardo_Diez_Viñuela.jpg
 exec_always --no-startup-id feh --bg-scale $HOME/Pictures/background.jpg
 bindsym $mod+Shift+w exec /usr/bin/google-chrome
