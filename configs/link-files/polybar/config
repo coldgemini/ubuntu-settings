@@ -61,9 +61,9 @@ font-5 = "Font Awesome 5 Brands:pixelsize=12;1"
 font-6 = WenQuanYi Micro Hei Mono:pixelsize=12;3
 
 modules-left = i3
-modules-center = mpd
+;modules-center = mpd
 ;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
-modules-right = filesystem xbacklight memory cpu eth battery temperature date powermenu
+modules-right = mpd filesystem memory cpu eth wlan date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -109,9 +109,12 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = D%{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+;label-mounted = D%{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-mounted = %{F#0a81f5}D%{F-} %free%/%total%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
+
+format-mounted-underline = #55aa55
 
 [module/bspwm]
 type = internal/bspwm
@@ -319,21 +322,23 @@ type = internal/network
 interface = wlp3s0
 interval = 3.0
 
-format-connected = <ramp-signal> <label-connected>
+;format-connected = <ramp-signal> <label-connected>
+format-connected =  <label-connected>
 format-connected-underline = #9f78e1
 label-connected = %essid%
+label-connected-foreground = #55aa55
 
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+;format-disconnected =
+format-disconnected = <label-disconnected>
+format-disconnected-underline = ${self.format-connected-underline}
+label-disconnected = %ifname%
+label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+ramp-signal-0 = 0
+ramp-signal-1 = 1
+ramp-signal-2 = 2
+ramp-signal-3 = 3
+ramp-signal-4 = 4
 ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
@@ -356,8 +361,8 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date =
-date-alt = " %Y-%m-%d"
+date = "%b-%d %a"
+date-alt = " %Y-%m-%d %A"
 
 time = %H:%M
 time-alt = %H:%M:%S
