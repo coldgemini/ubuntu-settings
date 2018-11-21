@@ -114,7 +114,8 @@ label-mounted = %{F#0a81f5}D%{F-} %free%/%total%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
-format-mounted-underline = #55aa55
+;format-mounted-underline = #55aa55
+format-mounted-underline = #A700CC
 
 [module/bspwm]
 type = internal/bspwm
@@ -160,6 +161,7 @@ label-focused-padding = ${module/bspwm.label-focused-padding}
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %icon%
+label-unfocused-underline = #004C61
 label-unfocused-padding = ${module/bspwm.label-occupied-padding}
 
 ; visible = Active workspace on unfocused monitor
@@ -174,7 +176,10 @@ label-urgent-background = ${module/bspwm.label-urgent-background}
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
 ; Separator in between workspaces
-; label-separator = |
+label-separator = |
+label-separator-padding = 0
+label-separator-foreground = #ffb52a
+
 fuzzy-match = false
 
 ws-icon-0 = 0;0
