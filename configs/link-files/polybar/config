@@ -52,13 +52,18 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=12;1
+;font-0 = fixed:pixelsize=12;1
+font-0 = "FontAwesome:pixelsize=12;1"
 font-1 = unifont:fontformat=truetype:size=12:antialias=false;0
 font-2 = siji:pixelsize=12;1
-font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=12;1"
+;font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=12;1"
+font-3 = "Font Awesome 5 Free Regular:pixelsize=12;1"
 font-4 = "Font Awesome 5 Free:style=Solid:pixelsize=12;1"
-font-5 = "Font Awesome 5 Brands:pixelsize=12;1"
-font-6 = WenQuanYi Micro Hei Mono:pixelsize=12;3
+font-5 = Lato:pixelsize=12;1
+font-6 = "WenQuanYi Micro Hei Mono:pixelsize=12;3"
+font-7 = "Ubuntu Mono:style=Regular:pixelsize=12;1"
+font-8 = "Symbola:style=Regular:pixelsize=12;1"
+;font-7 = "Ubuntu Mono:style=Regular:pixelsize=12;1"
 
 modules-left = i3
 ;modules-center = mpd
@@ -273,18 +278,17 @@ label-song =  %artist% - %title%
 label-offline = 🎜 mpd is offline
 
 ; Only applies if <icon-X> is used
-;icon-play = ⏵
-;icon-pause = ⏸
-;icon-stop = ⏹
-;icon-prev = ⏮
-;icon-next = ⏭
-;icon-seekb = ⏪
-;icon-seekf = ⏩
-;icon-random = 🔀
-;icon-repeat = 🔁
-;icon-repeatone = 🔂
-;icon-single = 🔂
-;icon-consume = ✀
+;icon-play = /home/xiang/Downloads/pycharm-2018.3/bin/JetbrainsCrack-3.1-release-enc.jar;icon-pause = ⏸
+icon-stop = ⏹
+icon-prev = ⏮
+icon-next = ⏭
+icon-seekb = ⏪
+icon-seekf = ⏩
+icon-random = 🔀
+icon-repeat = 🔁
+; icon-repeatone = 🔂
+; icon-single = 🔂
+; icon-consume = ✀
 ; Used to display the state of random/repeat/repeatone/single
 ; Only applies if <icon-[random|repeat|repeatone|single]> is used
 ;toggle-on-foreground = #ff
@@ -295,13 +299,14 @@ bar-progress-width = 40
 bar-progress-indicator = >
 bar-progress-fill = =
 bar-progress-empty = ─
-icon-prev =   ||
-icon-stop =  ||
+; icon-prev =   ||
+; icon-stop =  ||
 icon-play =  ||
-icon-random = 
-icon-repeat = 
+; icon-random = 
+; icon-repeat = %{T5}🎜%{T-}
+; icon-repeat = 
 icon-pause =  ||
-icon-next = 
+; icon-next = 
 
 label-song-maxlen = 25
 label-song-ellipsis = true
