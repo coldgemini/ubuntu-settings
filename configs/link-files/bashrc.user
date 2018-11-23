@@ -71,7 +71,3 @@ mailfile() {
 
 export http_proxy=”127.0.0.1:8123”
 export https_proxy=”127.0.0.1:8123”
-alias vim=/home/xiang/.local/bin/vim
-alias view=/home/xiang/.local/bin/view
-alias gvim=/home/xiang/.local/bin/gvim
-alias gview=/home/xiang/.local/bin/gview
