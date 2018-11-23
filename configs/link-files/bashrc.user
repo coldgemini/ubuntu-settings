@@ -46,7 +46,9 @@ export OPENCV_ARM=/home/xiang/Downloads/tmp/opencv-3.3.1/platforms/linux/build
 alias gpic=gpicview
 #alias netease-cloud-music=/home/xiang/apps/netease-cloud-music/usr/bin/netease-cloud-music
 alias addssdpycaffe='export PYTHONPATH=/home/xiang/Workbench/caffe-ssd/build/install/python:$PYTHONPATH'
+alias trdn="tr -d '\n'"
 alias cpxclip='xclip -selection -c'
+alias scpxclip='trdn | cpxclip'
 alias boostnote=/home/xiang/apps/boostnote/usr/share/boostnote/Boostnote
 alias caffe2ncnn=/home/xiang/Workbench/ncnn/build-x86_64/tools/caffe/caffe2ncnn
 export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
