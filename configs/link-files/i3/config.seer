@@ -335,7 +335,8 @@ exec_always --no-startup-id blueman-applet
 #exec --no-startup-id feh --bg-scale /usr/share/backgrounds/Cielo_estrellado_by_Eduardo_Diez_Viñuela.jpg
 exec_always --no-startup-id feh --bg-scale $HOME/Pictures/background.jpg
 exec_always --no-startup-id conky
-exec_always --no-startup-id setxkbmap -option caps:escape
+# exec_always --no-startup-id setxkbmap -option caps:escape
+exec --no-startup-id i3-msg "workspace DESKTOP; open"
 
 bindsym $mod+Shift+w exec /usr/bin/google-chrome
 bindsym $mod+Shift+i exec /usr/bin/google-chrome --incognito --new-window

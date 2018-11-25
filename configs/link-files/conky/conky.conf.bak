@@ -39,7 +39,7 @@ conky.config = {
     draw_shades = false,
     use_xft = true,
     font = 'DejaVu Sans Mono:size=12',
-    gap_x = 5,
+    gap_x = 10,
     gap_y = 60,
     minimum_height = 5,
 	minimum_width = 5,
@@ -77,6 +77,7 @@ ${color cyan}Processes: $processes  ${color grey}Running:$color $running_process
 $hr
 ${color orange}File systems:
  / ${color orange}${fs_used /}/${fs_size /} ${fs_bar 6 /}
+ sd ${color orange}${fs_used /mnt/ext_sd}/${fs_size /mnt/ext_sd} ${fs_bar 6 /mnt/ext_sd}
 ${color yellow}Networking:
 Up:${color yellow}${upspeed enx681def0ceea6} ${color yellow} - Down:${color yellow}${downspeed enx681def0ceea6}
 $color$hr
