@@ -240,6 +240,7 @@ ws-icon-53 = PROX;PROX
 ws-icon-54 = MAIL;MAIL
 ws-icon-55 = DESKTOP;DESKTOP
 ws-icon-56 = UML;UML
+ws-icon-57 = XMIND;XMIND
 ws-icon-default = 
 
 [module/xbacklight]

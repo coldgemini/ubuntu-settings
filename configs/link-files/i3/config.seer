@@ -223,7 +223,8 @@ bindsym $mod+Ctrl+n workspace NOTE
 bindsym $mod+Ctrl+a workspace AUDIO
 bindsym $mod+Ctrl+v workspace VIDEO
 bindsym $mod+Ctrl+o workspace WIN
-bindsym $mod+Ctrl+m workspace MAIL
+# bindsym $mod+Ctrl+m workspace MAIL
+bindsym $mod+Ctrl+m workspace XMIND
 bindsym $mod+Shift+m workspace MARKDOWN
 bindsym $mod+Ctrl+f workspace FOLDER
 bindsym $mod+Ctrl+h workspace HOME
