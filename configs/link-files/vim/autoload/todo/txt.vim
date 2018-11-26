@@ -1,1 +1,1 @@
-/home/xiang/Workbench/VimTodo/autoload/todo/txt.vim
+/home/xiang/Src/VimTodo/autoload/todo/txt.vim

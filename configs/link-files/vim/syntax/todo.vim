@@ -1,1 +1,1 @@
-/home/xiang/Workbench/VimTodo/syntax/todo.vim
+/home/xiang/Src/VimTodo/syntax/todo.vim

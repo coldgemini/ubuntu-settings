@@ -64,7 +64,7 @@ font-7 = WenQuanYi Micro Hei Mono:pixelsize=12;3
 modules-left = i3
 ;modules-center = mpd
 ;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
-modules-right = mpd filesystem memory cpu eth date powermenu
+modules-right = filesystem memory cpu eth wlan date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -230,7 +230,7 @@ ws-icon-43 = Android;Android
 ws-icon-44 = FOLDER;Folder
 ws-icon-45 = DOCS;Docs
 ws-icon-46 = PICS;Pics
-ws-icon-47 = NOTES;Notes
+ws-icon-47 = NOTE;Note
 ws-icon-48 = AUDIO;Audio
 ws-icon-49 = ZEAL;Zeal
 ws-icon-50 = TMP;TMP
@@ -238,6 +238,8 @@ ws-icon-51 = VIDEO;Video
 ws-icon-52 = HOME;HOME
 ws-icon-53 = PROX;PROX
 ws-icon-54 = MAIL;MAIL
+ws-icon-55 = DESKTOP;DESKTOP
+ws-icon-56 = UML;UML
 ws-icon-default = 
 
 [module/xbacklight]
