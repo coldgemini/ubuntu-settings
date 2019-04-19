@@ -1,6 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
+set autoread
+au CursorHold * checktime
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -253,14 +254,14 @@ set completeopt=longest,menu
 inoremap qq <ESC>
 nnoremap <C-p> :bp<CR>
 nnoremap <C-n> :bn<CR>
-call plug#begin('~/.vim/plugged')
+" call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'scrooloose/nerdcommenter'
-Plug 'bling/vim-airline'
-Plug 'google/vim-maktaba'
-Plug 'bazelbuild/vim-bazel'
-call plug#end()
+" Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+" Plug 'scrooloose/nerdcommenter'
+" Plug 'bling/vim-airline'
+" Plug 'google/vim-maktaba'
+" Plug 'bazelbuild/vim-bazel'
+" call plug#end()
 
 nnoremap <CR> o<Esc>
 map <F10> :NERDTreeToggle<CR>

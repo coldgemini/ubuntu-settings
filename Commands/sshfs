@@ -1,0 +1,1 @@
+sshfs -o Ciphers=arcfour -o Compression=no volcano:~/Data/ct_aorta ct_aorta

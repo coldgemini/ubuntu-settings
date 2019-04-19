@@ -1,79 +1,74 @@
-alias ll='ls -al'
-alias la='ls -a'
-export BASHRCUSER=true
-alias bashrcuser='source ~/.bashrc.user'
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH
-export PATH=/usr/local/cuda/bin:$PATH
+alias ll='ls -alr --color=auto'
+alias la='ls -ar --color=auto'
+alias ls='ls -tr --color=auto'
+# export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+# export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH
+# export PATH=/usr/local/cuda/bin:$PATH
+export PATH=$HOME/Apps/protoc/bin:$PATH
 
-export WORKON_HOME=~/Envs
+export WORKON_HOME=$HOME/Envs
 VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 #source /home/$USER/.local/bin/virtualenvwrapper.sh
 source /usr/local/bin/virtualenvwrapper.sh
 
-export CAFFE_ROOT=/home/$USER/Workbench/caffe
-#export PYTHONPATH
-alias addpycaffe='export PYTHONPATH=$CAFFE_ROOT/python:$PYTHONPATH'
-alias py3path='export PYTHONPATH=/home/$USER/.local/lib/python3.5/site-packages:$PYTHONPATH'
-alias py2path='export PYTHONPATH=/home/$USER/.local/lib/python2.7/site-packages:$PYTHONPATH'
-alias matlab='/home/$USER/MATLAB/R2017b/bin/matlab'
-alias matlabnojvm='/home/$USER/MATLAB/R2017b/bin/matlab -nojvm -nosplash'
-alias matlabnodisplay='/home/$USER/MATLAB/R2017b/bin/matlab -nodisplay -nosplash'
-alias matlabwin='/home/$USER/MATLAB/R2017b/bin/matlab'
-alias vsnotes='code /home/$USER/Documents/Notes/deepsight'
-export PYTHONPATH=/home/$USER/Workbench/caffe2/build:$PYTHONPATH
-export DETECTRON=/home/$USER/Workbench/Detectron
-alias server1='ssh -Y xiangyong@dsdp001'
-alias server2='ssh -Y xiangyong@dsdp002'
-alias server3='ssh -Y gemini@dsdp003'
-alias server4='ssh -Y xiang@192.168.1.127'
-alias connectnfs='sudo mount -t nfs -o rw,soft,timeo=30,retry=3 192.168.1.104:/var/storage/nfsroot ~/mnt/nfs'
-export PYTHONPATH=/home/$USER/Workbench/keras-retinanet-py3:$PYTHONPATH
-alias dataprocessing='cd /home/$USER/Workbench/Data-Processing'
-alias gonotes='cd /home/$USER/Documents/Notes/deepsight'
-export CALTECHCONV=/home/xiang/Data/caltech-pedestrian-dataset-converter
-export KITTI_TOOLS=/home/xiang/Data/KITTI_SSD/data/KITTI
-export PYTHONPATH=/home/xiang/Data/cocoapi/PythonAPI.maxDet:$PYTHONPATH
-alias joblog='code -n /home/xiang/Documents/joblog.md'
-export NCNN=/home/xiang/Workbench/ncnn
-export QQFileRecv="/home/xiang/.wine/drive_c/Program Files/QQ/Users/2596998852/FileRecv"
-export ANDROID_NDK=/home/xiang/Workbench/android-ndk-r15c
-export PATH=/home/xiang/Workbench/arm-eabi-4.6/bin:$PATH
-export ARCH=arm
-export CROSS_COMPILE=/home/xiang/Workbench/arm-eabi-4.6/bin/arm-eabi-
-alias add-arm-runtime='export LD_LIBRARY_PATH=/home/xiang/Workbench/linaro/latest-7/runtime-gcc-linaro-7.2.1-2017.11-arm-linux-gnueabihf/lib/arm-linux-gnueabihf:/home/xiang/Workbench/linaro/latest-7/runtime-gcc-linaro-7.2.1-2017.11-arm-linux-gnueabihf/usr/lib/arm-linux-gnueabihf:$LD_LIBRARY_PATH'
-export OPENCV_ARM=/home/xiang/Downloads/tmp/opencv-3.3.1/platforms/linux/build
-alias gpic=gpicview
-#alias netease-cloud-music=/home/xiang/apps/netease-cloud-music/usr/bin/netease-cloud-music
-alias addssdpycaffe='export PYTHONPATH=/home/xiang/Workbench/caffe-ssd/build/install/python:$PYTHONPATH'
+# export CAFFE_ROOT=/home/$USER/Workbench/caffe
+# alias matlab='/home/$USER/MATLAB/R2017b/bin/matlab'
+# alias matlabnojvm='/home/$USER/MATLAB/R2017b/bin/matlab -nojvm -nosplash'
+# alias matlabnodisplay='/home/$USER/MATLAB/R2017b/bin/matlab -nodisplay -nosplash'
+# alias matlabwin='/home/$USER/MATLAB/R2017b/bin/matlab'
+# alias connectnfs='sudo mount -t nfs -o rw,soft,timeo=30,retry=3 192.168.1.104:/var/storage/nfsroot ~/mnt/nfs'
+export PYTHONPATH=$HOME/Dev/models/research:$HOME/Dev/models/research/slim
+export PYTHONPATH=$HOME/Dev/models/research/object_detection:$PYTHONPATH
+export PYTHONPATH=$HOME/Dev/dataproc:$PYTHONPATH
+export PYTHONPATH=$HOME/Dev/util:$PYTHONPATH
+export PYTHONPATH=$HOME/Dev/python-all:$PYTHONPATH
+# export PYTHONPATH=$HOME/Dev/DataAugmentationForObjectDetection:$PYTHONPATH
 alias trdn="tr -d '\n'"
 alias cpxclip='xclip -selection -c'
 alias scpxclip='trdn | cpxclip'
-alias boostnote=/home/xiang/apps/boostnote/usr/share/boostnote/Boostnote
-alias caffe2ncnn=/home/xiang/Workbench/ncnn/build-x86_64/tools/caffe/caffe2ncnn
-export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
+# export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
 #export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4:/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4:/usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4:/usr/lib/x86_64-linux-gnu/libstdc++.so.6:/usr/lib/x86_64-linux-gnu/libfreetype.so.6
-alias aria2cserver='aria2c --conf-path ../apps/aria2.conf'
-alias envmatcaffe='source /home/xiang/Documents/Notes/deepsight/matcaffe_env.sh'
-alias rk3399='ssh -Y xiang@rk3399'
-alias rk3288='ssh -Y xiang@rk3288'
-alias NUC='ssh -Y xiang@NUC'
-alias dck=docker
 alias nautilus='nautilus --no-desktop'
 
 #unset http_proxy
 #unset https_proxy
 alias dirnums='du -a | cut -d/ -f2 | sort | uniq -c | sort -nr'
-export pgscript=/home/xiang/Documents/Notes/deepsight/python/PG
-#alias mailfile='echo "message" | mail -s "title" coldgemini@foxmail.com -A '
 alias todo='~/.todo.sh'
-mailfile() {
-	echo "sending attachment from xatom" | mail -s "attachment from xatom" -A $1 coldgemini@foxmail.com
-}
+# export http_proxy="127.0.0.1:8123"
+# export https_proxy="127.0.0.1:8123"
+alias xmllint='xmllint --format'
+alias volcano='ssh -Y zhouxiangyong@volcano'
+export pycharm_script=$HOME/PycharmProjects/scripts/scripts1
+export pytools=$HOME/Dev/python-all/pytools
+alias logdir='cd /home/xiang/Documents/MED/zhouxiangyong'
+alias htopu='htop -u xiang'
+alias listdir=/home/xiang/.Env/ubuntu-settings/Commands/listdir.sh
 
-# export http_proxy=”127.0.0.1:8123”
-# export https_proxy=”127.0.0.1:8123”
-# alias vim=/home/xiang/.local/bin/vim
-# alias view=/home/xiang/.local/bin/view
-# alias gvim=/home/xiang/.local/bin/gvim
-# alias gview=/home/xiang/.local/bin/gview
+# added by Anaconda3 5.3.1 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$(CONDA_REPORT_ERRORS=false '/home/xiang/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     \eval "$__conda_setup"
+# else
+#     if [ -f "/home/xiang/anaconda3/etc/profile.d/conda.sh" ]; then
+#         . "/home/xiang/anaconda3/etc/profile.d/conda.sh"
+#         CONDA_CHANGEPS1=false conda activate base
+#     else
+#         \export PATH="/home/xiang/anaconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# # <<< conda init <<<
+
+# alias py27='source activate py27'
+# alias py36='source activate py36'
+# alias deact='source deactivate'
+
+# eval "$(fasd --init auto)"
+fasd_cache="$HOME/.fasd-init-bash"
+if [ "$(command -v fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache" ]; then
+  fasd --init posix-alias bash-hook bash-ccomp bash-ccomp-install >| "$fasd_cache"
+fi
+source "$fasd_cache"
+unset fasd_cache
