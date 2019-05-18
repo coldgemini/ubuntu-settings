@@ -64,16 +64,15 @@ alias nautilus='nautilus --no-desktop'
 #unset http_proxy
 #unset https_proxy
 alias dirnums='du -a | cut -d/ -f2 | sort | uniq -c | sort -nr'
-export pgscript=/home/xiang/Documents/Notes/deepsight/python/PG
-#alias mailfile='echo "message" | mail -s "title" coldgemini@foxmail.com -A '
 alias todo='~/.todo.sh'
 mailfile() {
 	echo "sending attachment from xatom" | mail -s "attachment from xatom" -A $1 coldgemini@foxmail.com
 }
 
-# export http_proxy=”127.0.0.1:8123”
-# export https_proxy=”127.0.0.1:8123”
+# export http_proxy="127.0.0.1:8123"
+# export https_proxy="127.0.0.1:8123"
 # alias vim=/home/xiang/.local/bin/vim
 # alias view=/home/xiang/.local/bin/view
 # alias gvim=/home/xiang/.local/bin/gvim
 # alias gview=/home/xiang/.local/bin/gview
+# set -o vi

@@ -168,46 +168,46 @@ bindsym $mod+a focus parent
 #set $ws8 8
 
 # switch to workspace
-bindsym $mod+0 workspace 0
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+Ctrl+0 workspace 10
-bindsym $mod+Ctrl+1 workspace 11
-bindsym $mod+Ctrl+2 workspace 12
-bindsym $mod+Ctrl+3 workspace 13
-bindsym $mod+Ctrl+4 workspace 14
-bindsym $mod+Ctrl+5 workspace 15
-bindsym $mod+Ctrl+6 workspace 16
-bindsym $mod+Ctrl+7 workspace 17
-bindsym $mod+Ctrl+8 workspace 18
-bindsym $mod+Ctrl+9 workspace 19
-bindsym $mod+Shift+0 workspace 20
-bindsym $mod+Shift+1 workspace 21
-bindsym $mod+Shift+2 workspace 22
-bindsym $mod+Shift+3 workspace 23
-bindsym $mod+Shift+4 workspace 24
-bindsym $mod+Shift+5 workspace 25
-bindsym $mod+Shift+6 workspace 26
-bindsym $mod+Shift+7 workspace 27
-bindsym $mod+Shift+8 workspace 28
-bindsym $mod+Shift+9 workspace 29
-bindsym $mod+Ctrl+Shift+0 workspace 30
-bindsym $mod+Ctrl+Shift+1 workspace 31
-bindsym $mod+Ctrl+Shift+2 workspace 32
-bindsym $mod+Ctrl+Shift+3 workspace 33
-bindsym $mod+Ctrl+Shift+4 workspace 34
-bindsym $mod+Ctrl+Shift+5 workspace 35
-bindsym $mod+Ctrl+Shift+6 workspace 36
-bindsym $mod+Ctrl+Shift+7 workspace 37
-bindsym $mod+Ctrl+Shift+8 workspace 38
-bindsym $mod+Ctrl+Shift+9 workspace 39
+bindsym $mod+0 workspace 0:0
+bindsym $mod+1 workspace 1:1
+bindsym $mod+2 workspace 2:2
+bindsym $mod+3 workspace 3:3
+bindsym $mod+4 workspace 4:4
+bindsym $mod+5 workspace 5:5
+bindsym $mod+6 workspace 6:6
+bindsym $mod+7 workspace 7:7
+bindsym $mod+8 workspace 8:8
+bindsym $mod+9 workspace 9:9
+bindsym $mod+Ctrl+0 workspace 10:0
+bindsym $mod+Ctrl+1 workspace 11:1
+bindsym $mod+Ctrl+2 workspace 12:2
+bindsym $mod+Ctrl+3 workspace 13:3
+bindsym $mod+Ctrl+4 workspace 14:4
+bindsym $mod+Ctrl+5 workspace 15:5
+bindsym $mod+Ctrl+6 workspace 16:6
+bindsym $mod+Ctrl+7 workspace 17:7
+bindsym $mod+Ctrl+8 workspace 18:8
+bindsym $mod+Ctrl+9 workspace 19:9
+bindsym $mod+Shift+0 workspace 20:0
+bindsym $mod+Shift+1 workspace 21:1
+bindsym $mod+Shift+2 workspace 22:2
+bindsym $mod+Shift+3 workspace 23:3
+bindsym $mod+Shift+4 workspace 24:4
+bindsym $mod+Shift+5 workspace 25:5
+bindsym $mod+Shift+6 workspace 26:6
+bindsym $mod+Shift+7 workspace 27:7
+bindsym $mod+Shift+8 workspace 28:8
+bindsym $mod+Shift+9 workspace 29:9
+bindsym $mod+Ctrl+Shift+0 workspace 30:0
+bindsym $mod+Ctrl+Shift+1 workspace 31:1
+bindsym $mod+Ctrl+Shift+2 workspace 32:2
+bindsym $mod+Ctrl+Shift+3 workspace 33:3
+bindsym $mod+Ctrl+Shift+4 workspace 34:4
+bindsym $mod+Ctrl+Shift+5 workspace 35:5
+bindsym $mod+Ctrl+Shift+6 workspace 36:6
+bindsym $mod+Ctrl+Shift+7 workspace 37:7
+bindsym $mod+Ctrl+Shift+8 workspace 38:8
+bindsym $mod+Ctrl+Shift+9 workspace 39:9
 bindsym $mod+Ctrl+t workspace TMP
 bindsym $mod+Ctrl+r workspace RUN
 bindsym $mod+Ctrl+c workspace VSCODE
@@ -215,25 +215,25 @@ bindsym $mod+Ctrl+c workspace VSCODE
 bindsym $mod+Ctrl+u workspace UML
 bindsym $mod+Ctrl+k workspace TASK
 bindsym $mod+Ctrl+z workspace ZEAL
-bindsym $mod+Ctrl+d workspace DOCS
-bindsym $mod+Ctrl+i workspace InCog
-bindsym $mod+Ctrl+w workspace Chrome
+bindsym $mod+Ctrl+d workspace DOCS
+bindsym $mod+Ctrl+i workspace InCog
+bindsym $mod+Ctrl+w workspace Chrome
 bindsym $mod+Ctrl+g workspace PICS
-bindsym $mod+Ctrl+n workspace NOTE
-bindsym $mod+Ctrl+a workspace AUDIO
-bindsym $mod+Ctrl+v workspace VIDEO
-bindsym $mod+Ctrl+o workspace WIN
-bindsym $mod+Ctrl+m workspace MAIL
+bindsym $mod+Ctrl+n workspace NOTE
+bindsym $mod+Ctrl+a workspace AUDIO
+bindsym $mod+Ctrl+v workspace VIDEO
+bindsym $mod+Ctrl+o workspace WIN
+bindsym $mod+Ctrl+m workspace MAIL
 bindsym $mod+Shift+m workspace MARKDOWN
-bindsym $mod+Ctrl+f workspace FOLDER
-bindsym $mod+Ctrl+h workspace HOME
-bindsym $mod+Ctrl+p workspace PROX
-bindsym $mod+Ctrl+x workspace WX
-bindsym $mod+Ctrl+s workspace SYS
-bindsym $mod+Ctrl+l workspace WKLOG
-bindsym $mod+Home workspace HOME
-bindsym $mod+Ctrl+Home workspace Slack
-bindsym $mod+Ctrl+End workspace Android
+bindsym $mod+Ctrl+f workspace FOLDER
+bindsym $mod+Ctrl+h workspace HOME
+bindsym $mod+Ctrl+p workspace PROX
+bindsym $mod+Ctrl+x workspace WX
+bindsym $mod+Ctrl+s workspace SYS
+bindsym $mod+Ctrl+l workspace WKLOG
+bindsym $mod+Home workspace HOME
+bindsym $mod+Ctrl+Home workspace Slack
+bindsym $mod+Ctrl+End workspace Android
 #bindsym $mod+Ctrl+x workspace RSS
 #bindsym $mod+Ctrl+Shift+w move container to workspace WEB
 
@@ -258,9 +258,9 @@ for_window [class="^i3f*"] floating enable
 
 # Open applications on specific workspaces
 #assign [class="URxvt"] $ws1
-assign [class="google-chrome"] workspace Chrome
+assign [class="google-chrome"] workspace Chrome
 #assign [class="Firefox"] workspace FIREFOX
-assign [class="netease-cloud-music"] workspace AUDIO
+assign [class="netease-cloud-music"] workspace AUDIO
 #assign [class="/usr/bin/code"] workspace 3:3CODE
 # assign [class="Skype"] $ws5
 
@@ -298,31 +298,31 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# exec_always xrandr --output DP-4 --auto --primary
+exec_always xrandr --output HDMI-2 --auto --primary
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 #bindsym $mod+m bar mode toggle
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-#bar {
-	#status_command i3status
-		#tray_output primary
-		#font xft:Noto Sans 12
-		#strip_workspace_numbers no
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+bar {
+	status_command i3status
+		tray_output primary
+		font xft:Noto Sans 12
+		strip_workspace_numbers yes
 
-		#colors {
+		colors {
 ##       background $transparent
-			#background #2B2C2B
-				#statusline #F9FAF9
-				#separator  #454947
+			background #2B2C2B
+				statusline #F9FAF9
+				separator  #454947
 
-##                              border  backgr. text
-				#focused_workspace  #F9FAF9 #16A085 #2B2C2B
-				#active_workspace   #595B5B #353836 #FDF6E3
-				#inactive_workspace #595B5B #353836 #EEE8D5
-				#urgent_workspace   #16A085 #FDF6E3 #E5201D
-		#}
-#}
+#                              border  backgr. text
+				focused_workspace  #F9FAF9 #16A085 #2B2C2B
+				active_workspace   #595B5B #353836 #FDF6E3
+				inactive_workspace #595B5B #353836 #EEE8D5
+				urgent_workspace   #16A085 #FDF6E3 #E5201D
+		}
+}
 
 #user setting
 exec_always --no-startup-id nm-applet --sm-disable
@@ -336,7 +336,7 @@ exec_always --no-startup-id blueman-applet
 exec_always --no-startup-id feh --bg-scale $HOME/Pictures/background.jpg
 exec_always --no-startup-id conky
 # exec_always --no-startup-id setxkbmap -option caps:escape
-exec --no-startup-id i3-msg "workspace DESKTOP; open"
+# exec --no-startup-id i3-msg "workspace DESKTOP; open"
 
 bindsym $mod+Shift+w exec /usr/bin/google-chrome
 bindsym $mod+Shift+i exec /usr/bin/google-chrome --incognito --new-window
@@ -379,7 +379,7 @@ bindsym $mod+Print exec gnome-screenshot -i
 bindsym $mod+Down exec i3-input -F 'rename workspace to "%s"' -P 'Rename workspace: '
 #bindsym $mod+Insert exec i3-input -F 'workspace "%s"' -P 'new workspace: '
 bindsym $mod+KP_Add exec i3-input -F 'workspace "%s"' -P 'new workspace: '
-#bindsym $mod+KP_Add exec i3-input -F 'move container to workspace "%s"' -P 'move to workspace: '
+bindsym $mod+KP_Subtract exec i3-input -F 'move container to workspace "%s"' -P 'move to workspace: '
 # Start iceweasel on workspace 3, then switch back to workspace 1
 # (Being a command-line utility, i3-msg does not support startup notifications,
 #  hence the exec --no-startup-id.)
@@ -389,7 +389,7 @@ bindsym $mod+KP_Add exec i3-input -F 'workspace "%s"' -P 'new workspace: '
 #exec --no-startup-id i3-msg 'workspace 3; exec iceweasel; workspace 1'
 #"i3-msg -t get_workspaces | jq -r 'map(select(.focused))[0].name'"
 #bindsym $mod+KP_Divide exec "echo 'exit' | xargs -I{} i3-msg {}"
-bindsym $mod+KP_Subtract exec "/home/xiang/apps/i3-move-to-workspace"
+# bindsym $mod+KP_Subtract exec "/home/xiang/apps/i3-move-to-workspace"
 
 # Pulse Audio controls
 # bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +1%
