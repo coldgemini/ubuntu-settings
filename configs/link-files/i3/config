@@ -320,8 +320,8 @@ bindsym $mod+backslash scratchpad show
 bindsym $mod+Shift+Tab scratchpad show
 bindsym $mod+Print exec gnome-screenshot -i
 bindsym $mod+Down exec i3-input -F 'rename workspace to "%s"' -P 'Rename workspace: '
-bindsym $mod+Insert exec i3-input -F 'workspace "%s"' -P 'new workspace: '
-bindsym $mod+KP_Add exec i3-input -F 'move container to workspace "%s"' -P 'move to workspace: '
+bindsym $mod+KP_Add exec i3-input -F 'workspace "%s"' -P 'new workspace: '
+bindsym $mod+KP_Subtract exec i3-input -F 'move container to workspace "%s"' -P 'move to workspace: '
 # Start iceweasel on workspace 3, then switch back to workspace 1
 # (Being a command-line utility, i3-msg does not support startup notifications,
 #  hence the exec --no-startup-id.)
