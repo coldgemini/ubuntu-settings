@@ -286,8 +286,8 @@ nnoremap <leader>so :source ~/.vimrc<cr>
 ":augroup END
 set showcmd
 "let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'python':1 }
-nnoremap <F4> :Autoformat<CR>
-au BufWrite * :Autoformat
+"nnoremap <F4> :Autoformat<CR>
+"au BufWrite * :Autoformat
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0

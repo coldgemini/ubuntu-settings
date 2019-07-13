@@ -1,7 +1,7 @@
 alias ll='ls -al -htr'
 alias la='ls -a -htr'
 alias ls='ls --color=auto -htr'
-alias cat=ccat
+# alias cat=ccat
 export BASHRCUSER=true
 alias bashrc='source ~/.bashrc.user'
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
