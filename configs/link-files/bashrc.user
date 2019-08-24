@@ -67,6 +67,7 @@ alias dirnums='du -a | cut -d/ -f2 | sort | uniq -c | sort -nr'
 export pgscript=/home/xiang/Documents/Notes/deepsight/python/PG
 #alias mailfile='echo "message" | mail -s "title" coldgemini@foxmail.com -A '
 alias todo='~/.todo.sh'
+alias proxychains='proxychains4 -q -f /home/xiang/.Env/ubuntu-settings/files/proxychains.conf'
 mailfile() {
 	echo "sending attachment from xatom" | mail -s "attachment from xatom" -A $1 coldgemini@foxmail.com
 }
