@@ -10,9 +10,9 @@ fi
 if [ -L $HOME/.Xresources ];then
 	echo "moving .Xresources to .backups folder"
 	mv $HOME/.Xresources $HOME/.backups/.Xresources
-	ln -s $PWD/urxvt/Xresources.1 $HOME/.Xresources;
+	ln -s $PWD/urxvt/Xresources $HOME/.Xresources;
 else
-	ln -s $PWD/urxvt/Xresources.1 $HOME/.Xresources;
+	ln -s $PWD/urxvt/Xresources $HOME/.Xresources;
 fi
 if [ -L $HOME/.i3status.conf ];then
 	echo "moving .i3status.conf to .backups folder"

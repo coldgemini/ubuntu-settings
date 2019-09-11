@@ -1,1 +1,2 @@
 xargs -a list.txt cp -t new_folder
+ls /source/path/*pattern* | xargs -I{} cp -u {} /destination/path

@@ -218,6 +218,16 @@ bindsym $mod+Ctrl+Shift+Mod1+6 workspace 56:6
 bindsym $mod+Ctrl+Shift+Mod1+7 workspace 57:7
 bindsym $mod+Ctrl+Shift+Mod1+8 workspace 58:8
 bindsym $mod+Ctrl+Shift+Mod1+9 workspace 59:9
+bindsym $mod+Mod1+0 workspace 60:MNT0
+bindsym $mod+Mod1+1 workspace 61:MNT1
+bindsym $mod+Mod1+2 workspace 62:MNT2
+bindsym $mod+Mod1+3 workspace 63:MNT3
+bindsym $mod+Mod1+4 workspace 64:MNT4
+bindsym $mod+Mod1+5 workspace 65:MNT5
+bindsym $mod+Mod1+6 workspace 66:MNT6
+bindsym $mod+Mod1+7 workspace 67:MNT7
+bindsym $mod+Mod1+8 workspace 68:MNT8
+bindsym $mod+Mod1+9 workspace 69:MNT9
 bindsym $mod+Ctrl+Shift+t workspace 99:TMP
 bindsym $mod+Ctrl+t workspace 99:TASK
 bindsym $mod+Ctrl+r workspace 99:RUN
@@ -270,6 +280,17 @@ for_window [class="feh"] floating enable
 for_window [class="mpv"] floating enable
 for_window [class="Mask"] floating enable
 for_window [class="^i3f*"] floating enable
+for_window [class="matplotlib"] floating enable
+for_window [class="*Tutor*"] floating enable
+for_window [class="*tk*"] floating enable
+for_window [class="*Tk*"] floating enable
+for_window [class="tk"] floating enable
+for_window [class="Tk"] floating enable
+# for_window [class="Dialog" instance="__tk__messagebox"] floating enable
+for_window [class="Dialog"] floating enable
+# for_window [name="tk"] floating enable
+for_window [instance="*Tut*"] floating enable
+for_window [title="^TkFloat$"] floating enable
 
 # Open applications on specific workspaces
 #assign [class="URxvt"] $ws1
@@ -317,7 +338,7 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-#bindsym $mod+m bar mode toggle
+bindsym $mod+m bar mode toggle
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 bar {
  	status_command i3status
@@ -422,3 +443,5 @@ bindsym $mod+KP_Subtract exec i3-input -F 'move container to workspace "%s"' -P 
 # bindsym XF86AudioNext exec playerctl next
 # bindsym XF86AudioPrev exec playerctl previous
 #
+
+# bindsym $mod+Shift+l exec dm-tool switch-to-greeter

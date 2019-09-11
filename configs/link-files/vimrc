@@ -251,7 +251,7 @@ filetype plugin indent on
 "打开文件类型检测, 加了这句才可以用智能补全
 set completeopt=longest,menu
 
-inoremap qq <ESC>
+" inoremap qq <ESC>
 nnoremap <C-p> :bp<CR>
 nnoremap <C-n> :bn<CR>
 " call plug#begin('~/.vim/plugged')

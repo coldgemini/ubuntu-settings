@@ -1,2 +1,15 @@
 git lfs install
 git lfs track "*.iso"
+git init --bare
+
+git config -l
+git config --global http.proxy socks5://127.0.0.1:1080
+git config --global https.proxy socks5://127.0.0.1:1080
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+
+git config --global core.gitproxy "git-proxy"
+git config --global socks.proxy "127.0.0.1:1080"
+
+git config --global http.proxy socks5h://127.0.0.1:1080
+git config --global https.proxy socks5h://127.0.0.1:1080

@@ -25,9 +25,14 @@ URxvt.shading: 20
 !URxvt.borderColor:
 !URxvt.backgroundPixmap: 
 !URxvt.path:
-URxvt.font: xft:Dejavu Sans Mono:pixelsize=22,\
-						xft:Source\ Code\ Pro\ for\ Powerline:pixelsize=22:style=Regular,\
-						xft:FontAwesome:pixelsize=22:antialias=True:style=Regular,\
+URxvt.font: xft:Dejavu Sans Mono:size=16,\
+                        xft:WenQuanYi Zen Hei Sharpe:size=26:style=Regular:antialias=true,\
+                        xft:WenQuanYi Zen Hei:size=38:style=Regular:antialias=true,\
+                        xft:WenQuanYi Zen Hei Mono:size=38:style=Regular:antialias=true,\
+                        xft:WenQuanYi Micro Hei:size=38:style=Regular:antialias=true,\
+                        xft:WenQuanYi Micro Hei Mono:size=38:style=Regular:antialias=true,\
+                        xft:WenQuanYi Bitmap Song:size=26:style=Regular,\
+						xft:Source\ Code\ Pro\ for\ Powerline:size=22:style=ExtraLight,\
 						xft:PowerlineSymbols
 !URxvt.font: xft:Source\ Code\ Pro\ for\ Powerline:pixelsize=22,xft:PowerlineSymbols
 !URxvt.boldFont:
@@ -44,7 +49,6 @@ URxvt.title: rxvt-unicode
 !URxvt.utmpInhibit:
 !URxvt.print-pipe:
 URxvt.scrollBar: False
-!URxvt.scrollBar: True
 !URxvt.scrollBar_right:
 !URxvt.scrollBar_floating:
 !URxvt.scrollBar_align:
@@ -142,7 +146,7 @@ URxvt.color7: #D3D7CF
 
 URxvt.color15: #EEEEEC 
 
-URxvt.letterSpace: 12
+URxvt.letterSpace: 1
 !URxvt.font: xft:Source\ Code\ Pro\ for\ Powerline:pixelsize=22,xft:PowerlineSymbols
 !URxvt.scrollBar: false
 !Xft.dpi: 150
