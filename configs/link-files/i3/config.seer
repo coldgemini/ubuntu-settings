@@ -365,7 +365,7 @@ bar {
 #user setting
 exec_always --no-startup-id nm-applet --sm-disable
 exec --no-startup-id volumeicon
-exec_always --no-startup-id blueman-applet
+# exec_always --no-startup-id blueman-applet
 #exec --no-startup-id mpd
 #exec_always --no-startup-id classicmenu-indicator
 #exec_always --no-startup-id indicator-diskman
