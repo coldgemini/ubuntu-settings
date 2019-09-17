@@ -45,6 +45,7 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+-- beautiful.init(awful.util.getdir("config") .. "/themes/default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 -- terminal = "x-terminal-emulator"
@@ -103,6 +104,7 @@ myawesomemenu = {
    { "manual", terminal .. " -e man awesome" },
    { "edit config", editor_cmd .. " " .. awesome.conffile },
    { "restart", awesome.restart },
+   { "switch user", "/usr/bin/dm-tool switch-to-greeter" },
    { "quit", function() awesome.quit() end}
 }
 
@@ -254,7 +256,7 @@ globalkeys = gears.table.join(
               {description = "view next", group = "tag"}),
     -- awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
     --           {description = "go back", group = "tag"}),
-    awful.key({ modkey,           }, "Tab", awful.tag.history.restore,
+    awful.key({ modkey,     "Shift"      }, "Tab", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
 
     awful.key({ modkey,           }, "j",
@@ -283,16 +285,18 @@ globalkeys = gears.table.join(
               {description = "focus the previous screen", group = "screen"}),
     awful.key({ modkey,           }, "u", awful.client.urgent.jumpto,
               {description = "jump to urgent client", group = "client"}),
-    -- awful.key({ modkey,           }, "Tab",
-    --     function ()
-    --         awful.client.focus.history.previous()
-    --         if client.focus then
-    --             client.focus:raise()
-    --         end
-    --     end,
-    --     {description = "go back", group = "client"}),
+    awful.key({ modkey,           }, "Tab",
+        function ()
+            awful.client.focus.history.previous()
+            if client.focus then
+                client.focus:raise()
+            end
+        end,
+        {description = "go back", group = "client"}),
 
     -- Standard program
+    awful.key({ modkey, "Shift"  }, "Return", function () awful.spawn(terminal,{floating = true}) end,
+              {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
@@ -390,7 +394,13 @@ clientkeys = gears.table.join(
             c.maximized_horizontal = not c.maximized_horizontal
             c:raise()
         end ,
-        {description = "(un)maximize horizontally", group = "client"})
+        {description = "(un)maximize horizontally", group = "client"}),
+    awful.key({ modkey, "Shift"   }, "Down",   function (c) c:relative_move(  0,  0,   0,   20) end),
+    awful.key({ modkey, "Shift"   }, "Up",     function (c) c:relative_move(  0,  0,   0,  -20) end),
+    awful.key({ modkey, "Shift"   }, "Left",   function (c) c:relative_move( 0,   0,   -20,   0) end),
+    awful.key({ modkey, "Shift"   }, "Right",  function (c) c:relative_move( 0,   0,   20,   0) end),
+    awful.key({ modkey, "Shift"   }, "Next",   function (c) c:relative_move( 20,  20, -40, -40) end),
+    awful.key({ modkey, "Shift"   }, "Prior",  function (c) c:relative_move(-20, -20,  40,  40) end)
 )
 
 -- Bind all key numbers to tags.
