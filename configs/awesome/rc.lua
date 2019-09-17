@@ -50,6 +50,7 @@ beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 -- This is used later as the default terminal and editor to run.
 -- terminal = "x-terminal-emulator"
 terminal = "gnome-terminal"
+terminal_urxvt = "urxvt"
 rofi = "rofi -show run"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
@@ -192,7 +193,7 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Each screen has its own tag table.
     -- awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
-    awful.tag({ "HOME", "WEB", "TASK", "LOG", "SERV1", "SERV2", "SERV3", "SERV4", "TERM1", "TERM2", "TERM3", "TERM4"}, s, awful.layout.layouts[1])
+    awful.tag({ "HOME", "WEB", "TASK", "LOG", "SERV1", "SERV2", "SERV3", "SERV4", "MNT1", "MNT2", "MNT3", "MNT4", "TERM1", "TERM2", "TERM3", "TERM4"}, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -295,7 +296,7 @@ globalkeys = gears.table.join(
         {description = "go back", group = "client"}),
 
     -- Standard program
-    awful.key({ modkey, "Shift"  }, "Return", function () awful.spawn(terminal,{floating = true}) end,
+    awful.key({ modkey, "Shift"  }, "Return", function () awful.spawn(terminal_urxvt, {floating = true}) end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
@@ -399,8 +400,8 @@ clientkeys = gears.table.join(
     awful.key({ modkey, "Shift"   }, "Up",     function (c) c:relative_move(  0,  0,   0,  -20) end),
     awful.key({ modkey, "Shift"   }, "Left",   function (c) c:relative_move( 0,   0,   -20,   0) end),
     awful.key({ modkey, "Shift"   }, "Right",  function (c) c:relative_move( 0,   0,   20,   0) end),
-    awful.key({ modkey, "Shift"   }, "Next",   function (c) c:relative_move( 20,  20, -40, -40) end),
-    awful.key({ modkey, "Shift"   }, "Prior",  function (c) c:relative_move(-20, -20,  40,  40) end)
+    awful.key({ modkey, "Shift"   }, "Page_Down",   function (c) c:relative_move( 20,  20, -40, -40) end),
+    awful.key({ modkey, "Shift"   }, "Page_Up",  function (c) c:relative_move(-20, -20,  40,  40) end)
 )
 
 -- Bind all key numbers to tags.
