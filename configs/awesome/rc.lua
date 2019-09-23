@@ -44,14 +44,17 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+-- beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+-- beautiful.init(gears.filesystem.get_themes_dir() .. "zenburn/theme.lua")
 -- beautiful.init(awful.util.getdir("config") .. "/themes/default/theme.lua")
+beautiful.init(awful.util.getdir("config") .. "/themes/zenburn/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 -- terminal = "x-terminal-emulator"
 terminal = "gnome-terminal"
 terminal_urxvt = "urxvt"
 rofi = "rofi -show run"
+screenshot = "gnome-screenshot -i"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -143,8 +146,8 @@ local taglist_buttons = gears.table.join(
                                                   client.focus:toggle_tag(t)
                                               end
                                           end),
-                    awful.button({ }, 4, function(t) awful.tag.viewnext(t.screen) end),
-                    awful.button({ }, 5, function(t) awful.tag.viewprev(t.screen) end)
+                    awful.button({ }, 5, function(t) awful.tag.viewnext(t.screen) end),
+                    awful.button({ }, 4, function(t) awful.tag.viewprev(t.screen) end)
                 )
 
 local tasklist_buttons = gears.table.join(
@@ -193,7 +196,7 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Each screen has its own tag table.
     -- awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
-    awful.tag({ "HOME", "WEB", "TASK", "LOG", "SERV1", "SERV2", "SERV3", "SERV4", "MNT1", "MNT2", "MNT3", "MNT4", "TERM1", "TERM2", "TERM3", "TERM4"}, s, awful.layout.layouts[1])
+    awful.tag({ "HOME", "WEB", "TASK", "LOG", "Paper", "Zotero", "Note", "Git", "ITK", "Tmp", "SERV1", "SERV2", "SERV3", "SERV4", "MNT1", "MNT2", "MNT3", "MNT4", "TERM1", "TERM2", "TERM3", "TERM4"}, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -230,7 +233,7 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
+            -- mykeyboardlayout,
             wibox.widget.systray(),
             mytextclock,
             s.mylayoutbox,
@@ -242,8 +245,8 @@ end)
 -- {{{ Mouse bindings
 root.buttons(gears.table.join(
     awful.button({ }, 3, function () mymainmenu:toggle() end),
-    awful.button({ }, 4, awful.tag.viewnext),
-    awful.button({ }, 5, awful.tag.viewprev)
+    awful.button({ }, 5, awful.tag.viewnext),
+    awful.button({ }, 4, awful.tag.viewprev)
 ))
 -- }}}
 
@@ -272,8 +275,8 @@ globalkeys = gears.table.join(
         end,
         {description = "focus previous by index", group = "client"}
     ),
-    awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
-              {description = "show main menu", group = "awesome"}),
+    -- awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
+    --           {description = "show main menu", group = "awesome"}),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
@@ -296,7 +299,7 @@ globalkeys = gears.table.join(
         {description = "go back", group = "client"}),
 
     -- Standard program
-    awful.key({ modkey, "Shift"  }, "Return", function () awful.spawn(terminal_urxvt, {floating = true}) end,
+    awful.key({ modkey, "Shift"  }, "Return", function () awful.spawn(terminal, {floating = true}) end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
@@ -337,6 +340,8 @@ globalkeys = gears.table.join(
     -- awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
     --           {description = "run prompt", group = "launcher"}),
     awful.key({ modkey },            "r",     function () awful.spawn(rofi) end,
+              {description = "run prompt", group = "launcher"}),
+    awful.key({ modkey },            "Print",     function () awful.spawn(screenshot) end,
               {description = "run prompt", group = "launcher"}),
 
     awful.key({ modkey }, "x",
@@ -509,7 +514,25 @@ globalkeys = awful.util.table.join(globalkeys,
 							local t = awful.tag.add(s, {layout=awful.layout.suit.fair})
                             t:view_only()
 						end)
-				end))
+                end),
+
+    -- tag shotcut.
+    awful.key({ modkey }, "w",
+                function ()
+                    local tag = awful.tag.find_by_name(awful.screen.focused(), "WEB")
+                    if tag then
+                        tag:view_only()
+                    end
+                end,
+                {description = "view tag #", group = "tag"}),
+    awful.key({ modkey }, "t",
+                function ()
+                    local tag = awful.tag.find_by_name(awful.screen.focused(), "TASK")
+                    if tag then
+                        tag:view_only()
+                    end
+                end,
+                {description = "view tag #", group = "tag"}))
 
 clientbuttons = gears.table.join(
     awful.button({ }, 1, function (c) client.focus = c; c:raise() end),
