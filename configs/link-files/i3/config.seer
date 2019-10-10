@@ -1,5 +1,5 @@
-gaps inner 5
-gaps outer 0
+# gaps inner 4
+# gaps outer 0
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # # gaps inner|outer current|all set|plus|minus <px>
@@ -97,8 +97,13 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec dmenu_recent_aliases
-bindsym $mod+d exec rofi -show run
-bindsym $mod+Shift+s exec rofi -show window
+# bindsym $mod+d exec rofi -show run
+# bindsym $mod+d exec rofi -show run -theme Arc
+# bindsym $mod+d exec rofi -show run -theme solarized
+# bindsym $mod+d exec rofi -show run -theme solarized_alternate
+bindsym $mod+d exec rofi -show run -theme Monokai
+# bindsym $mod+Shift+s exec rofi -show window
+bindsym $mod+Shift+Home exec rofi -show window -theme Arc
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -145,6 +150,9 @@ bindsym $mod+e layout toggle split
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
+# sticky window toggle
+# bindsym $mod+Shift+s sticky toggle
+
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
@@ -168,94 +176,89 @@ bindsym $mod+a focus parent
 #set $ws8 8
 
 # switch to workspace
-bindsym $mod+0 workspace 10:0
-bindsym $mod+1 workspace 11:1
-bindsym $mod+2 workspace 12:2
-bindsym $mod+3 workspace 13:3
-bindsym $mod+4 workspace 14:4
-bindsym $mod+5 workspace 15:5
-bindsym $mod+6 workspace 16:6
-bindsym $mod+7 workspace 17:7
-bindsym $mod+8 workspace 18:8
-bindsym $mod+9 workspace 19:9
-bindsym $mod+Ctrl+0 workspace 20:0
-bindsym $mod+Ctrl+1 workspace 21:1
-bindsym $mod+Ctrl+2 workspace 22:2
-bindsym $mod+Ctrl+3 workspace 23:3
-bindsym $mod+Ctrl+4 workspace 24:4
-bindsym $mod+Ctrl+5 workspace 25:5
-bindsym $mod+Ctrl+6 workspace 26:6
-bindsym $mod+Ctrl+7 workspace 27:7
-bindsym $mod+Ctrl+8 workspace 28:8
-bindsym $mod+Ctrl+9 workspace 29:9
-bindsym $mod+Shift+0 workspace 30:0
-bindsym $mod+Shift+1 workspace 31:1
-bindsym $mod+Shift+2 workspace 32:2
-bindsym $mod+Shift+3 workspace 33:3
-bindsym $mod+Shift+4 workspace 34:4
-bindsym $mod+Shift+5 workspace 35:5
-bindsym $mod+Shift+6 workspace 36:6
-bindsym $mod+Shift+7 workspace 37:7
-bindsym $mod+Shift+8 workspace 38:8
-bindsym $mod+Shift+9 workspace 39:9
-bindsym $mod+Ctrl+Shift+0 workspace 40:0
-bindsym $mod+Ctrl+Shift+1 workspace 41:1
-bindsym $mod+Ctrl+Shift+2 workspace 42:2
-bindsym $mod+Ctrl+Shift+3 workspace 43:3
-bindsym $mod+Ctrl+Shift+4 workspace 44:4
-bindsym $mod+Ctrl+Shift+5 workspace 45:5
-bindsym $mod+Ctrl+Shift+6 workspace 46:6
-bindsym $mod+Ctrl+Shift+7 workspace 47:7
-bindsym $mod+Ctrl+Shift+8 workspace 48:8
-bindsym $mod+Ctrl+Shift+9 workspace 49:9
-bindsym $mod+Ctrl+Shift+Mod1+0 workspace 50:0
-bindsym $mod+Ctrl+Shift+Mod1+1 workspace 51:1
-bindsym $mod+Ctrl+Shift+Mod1+2 workspace 52:2
-bindsym $mod+Ctrl+Shift+Mod1+3 workspace 53:3
-bindsym $mod+Ctrl+Shift+Mod1+4 workspace 54:4
-bindsym $mod+Ctrl+Shift+Mod1+5 workspace 55:5
-bindsym $mod+Ctrl+Shift+Mod1+6 workspace 56:6
-bindsym $mod+Ctrl+Shift+Mod1+7 workspace 57:7
-bindsym $mod+Ctrl+Shift+Mod1+8 workspace 58:8
-bindsym $mod+Ctrl+Shift+Mod1+9 workspace 59:9
-bindsym $mod+Mod1+0 workspace 60:MNT0
-bindsym $mod+Mod1+1 workspace 61:MNT1
-bindsym $mod+Mod1+2 workspace 62:MNT2
-bindsym $mod+Mod1+3 workspace 63:MNT3
-bindsym $mod+Mod1+4 workspace 64:MNT4
-bindsym $mod+Mod1+5 workspace 65:MNT5
-bindsym $mod+Mod1+6 workspace 66:MNT6
-bindsym $mod+Mod1+7 workspace 67:MNT7
-bindsym $mod+Mod1+8 workspace 68:MNT8
-bindsym $mod+Mod1+9 workspace 69:MNT9
-bindsym $mod+Ctrl+Shift+t workspace 99:TMP
-bindsym $mod+Ctrl+t workspace 99:TASK
-bindsym $mod+Ctrl+r workspace 99:RUN
-bindsym $mod+Ctrl+c workspace 99:VSCODE
+# bindsym $mod+Home workspace 0:Home
+#home
+bindsym $mod+Home workspace 0:
+#folder
+bindsym $mod+Ctrl+f workspace 1:
+#web
+bindsym $mod+Ctrl+w workspace 2:
+#web2
+bindsym $mod+Shift+Ctrl+w workspace 3:
+#wechat
+bindsym $mod+Ctrl+x workspace 4:
+#task
+bindsym $mod+Ctrl+t workspace 5:
+#read
+bindsym $mod+Ctrl+d workspace 6:
+#refs
+bindsym $mod+Ctrl+r workspace 7:
+#note
+bindsym $mod+Ctrl+n workspace 8:
+#log
+bindsym $mod+Ctrl+l workspace 9:
+#2d
+bindsym $mod+Ctrl+g workspace 10:
+#3d
+bindsym $mod+Ctrl+i workspace 11:
+#audio
+bindsym $mod+Ctrl+a workspace 12:
+#video
+bindsym $mod+Ctrl+v workspace 13:
+#windows
+bindsym $mod+Ctrl+b workspace 19:
+
+bindsym $mod+0 workspace 20:0
+bindsym $mod+1 workspace 21:1
+bindsym $mod+2 workspace 22:2
+bindsym $mod+3 workspace 23:3
+bindsym $mod+4 workspace 24:4
+bindsym $mod+5 workspace 25:5
+bindsym $mod+6 workspace 26:6
+bindsym $mod+7 workspace 27:7
+bindsym $mod+8 workspace 28:8
+bindsym $mod+9 workspace 29:9
+bindsym $mod+Ctrl+0 workspace 30:0
+bindsym $mod+Ctrl+1 workspace 31:1
+bindsym $mod+Ctrl+2 workspace 32:2
+bindsym $mod+Ctrl+3 workspace 33:3
+bindsym $mod+Ctrl+4 workspace 34:4
+bindsym $mod+Ctrl+5 workspace 35:5
+bindsym $mod+Ctrl+6 workspace 36:6
+bindsym $mod+Ctrl+7 workspace 37:7
+bindsym $mod+Ctrl+8 workspace 38:8
+bindsym $mod+Ctrl+9 workspace 39:9
+bindsym $mod+Shift+Mod1+0 workspace 40:0
+bindsym $mod+Shift+Mod1+1 workspace 41:1
+bindsym $mod+Shift+Mod1+2 workspace 42:2
+bindsym $mod+Shift+Mod1+3 workspace 43:3
+bindsym $mod+Shift+Mod1+4 workspace 44:4
+bindsym $mod+Shift+Mod1+5 workspace 45:3
+bindsym $mod+Shift+Mod1+6 workspace 46:6
+bindsym $mod+Shift+Mod1+7 workspace 47:7
+bindsym $mod+Shift+Mod1+8 workspace 48:8
+bindsym $mod+Shift+Mod1+9 workspace 49:9
+# bindsym $mod+Shift+0 workspace 30:0
+# bindsym $mod+Ctrl+Shift+0 workspace 40:0
+# bindsym $mod+Shift+Mod1+0 workspace 30:0
+# bindsym $mod+Mod1+0 workspace 60:MNT0
+# bindsym $mod+Ctrl+r workspace 99:RUN
+# bindsym $mod+Ctrl+c workspace 99:VSCODE
 #bindsym $mod+Ctrl+x workspace TMPX
-bindsym $mod+Ctrl+u workspace 99:UML
-bindsym $mod+Ctrl+k workspace 99:TASK
-bindsym $mod+Ctrl+z workspace 99:ZEAL
-bindsym $mod+Ctrl+d workspace 99:DOCS
-bindsym $mod+Ctrl+i workspace 99:InCog
-bindsym $mod+Ctrl+w workspace 99:Chrome
-bindsym $mod+Ctrl+g workspace 99:PICS
-bindsym $mod+Ctrl+n workspace 99:NOTE
-bindsym $mod+Ctrl+a workspace 99:AUDIO
-bindsym $mod+Ctrl+v workspace 99:VIDEO
-bindsym $mod+Ctrl+o workspace 99:WIN
+# bindsym $mod+Ctrl+u workspace 99:UML
+# bindsym $mod+Ctrl+k workspace 99:TASK
+# bindsym $mod+Ctrl+z workspace 99:ZEAL
+# bindsym $mod+Ctrl+i workspace 99:InCog
+# bindsym $mod+Ctrl+a workspace 99:AUDIO
+# bindsym $mod+Ctrl+v workspace 99:VIDEO
 # bindsym $mod+Ctrl+m workspace MAIL
-bindsym $mod+Ctrl+m workspace 99:XMIND
-bindsym $mod+Ctrl+Shift+m workspace 99:MARKDOWN
-bindsym $mod+Ctrl+f workspace 99:FOLDER
-bindsym $mod+Ctrl+h workspace 99:HOME
-bindsym $mod+Ctrl+p workspace 99:PROX
-bindsym $mod+Ctrl+x workspace 99:WX
-bindsym $mod+Ctrl+s workspace 99:SYS
-bindsym $mod+Ctrl+l workspace 99:WKLOG
-bindsym $mod+Home workspace 99:HOME
-bindsym $mod+Ctrl+Home workspace 99:Slack
-bindsym $mod+Ctrl+End workspace 99:Android
+# bindsym $mod+Ctrl+m workspace 99:XMIND
+# bindsym $mod+Ctrl+Shift+m workspace 99:MARKDOWN
+# bindsym $mod+Ctrl+h workspace 99:HOME
+# bindsym $mod+Ctrl+p workspace 99:PROX
+# bindsym $mod+Ctrl+s workspace 99:SYS
+# bindsym $mod+Ctrl+Home workspace 99:Slack
+# bindsym $mod+Ctrl+End workspace 99:Android
 # bindsym $mod+Ctrl+x workspace 9:RSS
 #bindsym $mod+Ctrl+Shift+w move container to workspace WEB
 
@@ -294,7 +297,7 @@ for_window [title="^TkFloat$"] floating enable
 
 # Open applications on specific workspaces
 #assign [class="URxvt"] $ws1
-assign [class="google-chrome"] workspace 99:Chrome
+assign [class="google-chrome"] workspace 2:Web
 #assign [class="Firefox"] workspace FIREFOX
 assign [class="netease-cloud-music"] workspace 99:AUDIO
 #assign [class="/usr/bin/code"] workspace 3:3CODE
@@ -305,8 +308,8 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+Shift+e exec "i3-msg exit"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# bindsym $mod+Shift+e exec "i3-msg exit"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -379,7 +382,7 @@ exec_always --no-startup-id conky
 bindsym $mod+Shift+d exec nautilus --no-desktop $HOME
 # bindsym $mod+Shift+d exec pavucontrol
 bindsym $mod+Shift+w exec /usr/bin/google-chrome
-bindsym $mod+Shift+i exec /usr/bin/google-chrome --incognito --new-window
+# bindsym $mod+Shift+i exec /usr/bin/google-chrome --incognito --new-window
 bindsym $mod+Shift+f exec /usr/bin/firefox
 #bindsym $mod+Shift+m exec /usr/bin/code -n
 # bindsym $mod+Shift+u exec /usr/bin/netease-cloud-music

@@ -196,7 +196,7 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Each screen has its own tag table.
     -- awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
-    awful.tag({ "HOME", "WEB", "TASK", "LOG", "Paper", "Zotero", "Note", "Git", "ITK", "Tmp", "SERV1", "SERV2", "SERV3", "SERV4", "MNT1", "MNT2", "MNT3", "MNT4", "TERM1", "TERM2", "TERM3", "TERM4"}, s, awful.layout.layouts[1])
+    awful.tag({ "HOME", "WEB", "TASK", "LOG", "READ", "REF", "Note", "Git", "3D", "TERM1", "TERM2", "SERV1", "SERV2", "SERV3", "SERV4", "MNT1", "MNT2", "MNT3", "MNT4"}, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -235,7 +235,7 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             -- mykeyboardlayout,
             wibox.widget.systray(),
-            mytextclock,
+            -- mytextclock,
             s.mylayoutbox,
         },
     }
@@ -305,8 +305,8 @@ globalkeys = gears.table.join(
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
-    awful.key({ modkey, "Shift"   }, "q", awesome.quit,
-              {description = "quit awesome", group = "awesome"}),
+    -- awful.key({ modkey, "Shift"   }, "q", awesome.quit,
+    --           {description = "quit awesome", group = "awesome"}),
 
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
@@ -524,15 +524,15 @@ globalkeys = awful.util.table.join(globalkeys,
                         tag:view_only()
                     end
                 end,
-                {description = "view tag #", group = "tag"}),
-    awful.key({ modkey }, "t",
-                function ()
-                    local tag = awful.tag.find_by_name(awful.screen.focused(), "TASK")
-                    if tag then
-                        tag:view_only()
-                    end
-                end,
                 {description = "view tag #", group = "tag"}))
+    -- awful.key({ modkey }, "t",
+    --             function ()
+    --                 local tag = awful.tag.find_by_name(awful.screen.focused(), "TASK")
+    --                 if tag then
+    --                     tag:view_only()
+    --                 end
+    --             end,
+    --             {description = "view tag #", group = "tag"}))
 
 clientbuttons = gears.table.join(
     awful.button({ }, 1, function (c) client.focus = c; c:raise() end),

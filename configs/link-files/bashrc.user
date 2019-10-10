@@ -1,3 +1,4 @@
+export EDITOR=vim
 alias sudo='sudo '
 alias ll='ls -alr --color=auto'
 alias la='ls -ar --color=auto'
@@ -58,6 +59,9 @@ alias goVM='ssh xiang@192.168.147.128 -X'
 alias sctl='systemctl'
 alias jctl='journalctl'
 alias cdw='cd /home/xiang/Workspace'
+alias ws='cat $HOME/.i3/config | grep "^bind" | grep workspace'
+alias wss='cat $HOME/.i3/other_ws'
+alias wins='rofi -show window'
 
 source /home/xiang/.bashrc.functions
 
@@ -83,11 +87,11 @@ source /home/xiang/.bashrc.functions
 # alias deact='source deactivate'
 
 # eval "$(fasd --init auto)"
-fasd_cache="$HOME/.fasd-init-bash"
-if [ "$(command -v fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache" ]; then
-  fasd --init posix-alias bash-hook bash-ccomp bash-ccomp-install >| "$fasd_cache"
-fi
-source "$fasd_cache"
-unset fasd_cache
+# fasd_cache="$HOME/.fasd-init-bash"
+# if [ "$(command -v fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache" ]; then
+#   fasd --init posix-alias bash-hook bash-ccomp bash-ccomp-install >| "$fasd_cache"
+# fi
+# source "$fasd_cache"
+# unset fasd_cache
 
 # eval "$(thefuck --alias)"
