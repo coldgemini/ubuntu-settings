@@ -187,6 +187,7 @@ bindsym $mod+Ctrl+w workspace 2:
 bindsym $mod+Shift+Ctrl+w workspace 3:
 #wechat
 bindsym $mod+Ctrl+x workspace 4:
+
 #task
 bindsym $mod+Ctrl+t workspace 5:
 #read
@@ -197,14 +198,19 @@ bindsym $mod+Ctrl+r workspace 7:
 bindsym $mod+Ctrl+n workspace 8:
 #log
 bindsym $mod+Ctrl+l workspace 9:
+
 #2d
-bindsym $mod+Ctrl+g workspace 10:
+bindsym $mod+Ctrl+p workspace 10:
 #3d
 bindsym $mod+Ctrl+i workspace 11:
 #audio
 bindsym $mod+Ctrl+a workspace 12:
 #video
 bindsym $mod+Ctrl+v workspace 13:
+
+#git
+bindsym $mod+Ctrl+g workspace 14:
+
 #windows
 bindsym $mod+Ctrl+b workspace 19:
 
