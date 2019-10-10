@@ -366,7 +366,9 @@ bar {
  				# active_workspace   #595B5B #353836 #FDF6E3
  				active_workspace   #595B5B #00FF8E #FDF6E3
  				# inactive_workspace #595B5B #353836 #EEE8D5
- 				inactive_workspace #4C72FF #7A6000 #EEE8D5
+ 				# inactive_workspace #4C72FF #7A6000 #EEE8D5
+ 				inactive_workspace #112246 #39330E #EEE8D5
+ 				# urgent_workspace   #16A085 #FDF6E3 #E5201D
  				urgent_workspace   #16A085 #FDF6E3 #E5201D
  		}
 }
