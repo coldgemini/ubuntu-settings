@@ -1,3 +1,4 @@
+alias rc='. $HOME/.bashrc.user'
 export EDITOR=vim
 alias sudo='sudo '
 alias ll='ls -alr --color=auto'
@@ -25,7 +26,8 @@ export PYTHONPATH=$HOME/Dev/dataproc:$PYTHONPATH
 # export PYTHONPATH=$HOME/Dev/util:$PYTHONPATH
 export PYTHONPATH=$HOME/Dev/haohua:$PYTHONPATH
 export PYTHONPATH=$HOME/Dev/python-all:$PYTHONPATH
-export PYTHONPATH=$HOME/Workspace/Proj/common-utils:$PYTHONPATH
+# export PYTHONPATH=$HOME/Workspace/Proj/common-utils:$PYTHONPATH
+export PYTHONPATH=$HOME/Workspace/Proj/xyz_utils:$PYTHONPATH
 # export PYTHONPATH=$HOME/Dev/DataAugmentationForObjectDetection:$PYTHONPATH
 export CHEAT_COLORS=true
 alias trdn="tr -d '\n'"
@@ -44,11 +46,13 @@ alias todo='~/.todo.sh'
 alias xmllint='xmllint --format'
 alias volcano='ssh -Y zhouxiangyong@volcano'
 # alias go107='ssh -Y zhouxiangyong@s107 -p 6000'
-alias go108='ssh -Y zhouxiangyong@s108 -p 10822'
+# alias go108='ssh -Y zhouxiangyong@s108 -p 10822'
+alias go108='autossh -M 0 -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -Y zhouxiangyong@s108 -p 10822'
 export pycharm_script=$HOME/PycharmProjects/scripts/scripts1
 export pytools=$HOME/Dev/python-all/pytools
 export pypacks=$HOME/Dev/python-all/pypacks
 export pypaper=$HOME/Dev/python-all/pypaper
+export pytemp=$HOME/Dev/python-all/pytemp
 alias logdir='cd /home/xiang/Documents/MED/zhouxiangyong'
 alias htopu='htop -u xiang'
 alias listdir=/home/xiang/.Env/ubuntu-settings/Commands/listdir.sh
@@ -59,12 +63,30 @@ alias goVM='ssh xiang@192.168.147.128 -X'
 alias sctl='systemctl'
 alias jctl='journalctl'
 alias cdw='cd /home/xiang/Workspace'
+alias vpy='workon py37'
 alias i3cfg='cat $HOME/.i3/config'
 alias ws='cat $HOME/.i3/config | grep "^bind" | grep workspace'
 alias wss='cat $HOME/.i3/other_ws'
 alias wins='rofi -show window'
+alias xprop='xprop'
 
+
+### git shorcut ###
+alias gs='git status'
+alias ga='git add'
+alias gcm='git commit -a -m'
+alias gcl='git clone'
+alias gp='git push'
+alias gr='git remote -v'
+alias gb='git branch -a'
+alias gl='git log'
+alias gd='git diff'
+
+alias vpn='expressvpn'
+alias vpnon='expressvpn connect'
+alias vpnoff='expressvpn disconnect'
 source /home/xiang/.bashrc.functions
+
 
 # added by Anaconda3 5.3.1 installer
 # >>> conda init >>>
@@ -87,12 +109,12 @@ source /home/xiang/.bashrc.functions
 # alias py36='source activate py36'
 # alias deact='source deactivate'
 
-# eval "$(fasd --init auto)"
-# fasd_cache="$HOME/.fasd-init-bash"
-# if [ "$(command -v fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache" ]; then
-#   fasd --init posix-alias bash-hook bash-ccomp bash-ccomp-install >| "$fasd_cache"
-# fi
-# source "$fasd_cache"
-# unset fasd_cache
+eval "$(fasd --init auto)"
+fasd_cache="$HOME/.fasd-init-bash"
+if [ "$(command -v fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache" ]; then
+  fasd --init posix-alias bash-hook bash-ccomp bash-ccomp-install >| "$fasd_cache"
+fi
+source "$fasd_cache"
+unset fasd_cache
 
 # eval "$(thefuck --alias)"

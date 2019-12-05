@@ -210,9 +210,11 @@ bindsym $mod+Ctrl+v workspace 13:
 
 #git
 bindsym $mod+Ctrl+g workspace 14:
+#baidu
+bindsym $mod+Ctrl+b workspace 15:
 
 #windows
-bindsym $mod+Ctrl+b workspace 19:
+bindsym $mod+Shift+Ctrl+v workspace 19:
 
 bindsym $mod+0 workspace 20:0
 bindsym $mod+1 workspace 21:1
@@ -239,7 +241,7 @@ bindsym $mod+Shift+Mod1+1 workspace 41:1
 bindsym $mod+Shift+Mod1+2 workspace 42:2
 bindsym $mod+Shift+Mod1+3 workspace 43:3
 bindsym $mod+Shift+Mod1+4 workspace 44:4
-bindsym $mod+Shift+Mod1+5 workspace 45:3
+bindsym $mod+Shift+Mod1+5 workspace 45:5
 bindsym $mod+Shift+Mod1+6 workspace 46:6
 bindsym $mod+Shift+Mod1+7 workspace 47:7
 bindsym $mod+Shift+Mod1+8 workspace 48:8
@@ -300,6 +302,8 @@ for_window [class="Dialog"] floating enable
 # for_window [name="tk"] floating enable
 for_window [instance="*Tut*"] floating enable
 for_window [title="^TkFloat$"] floating enable
+for_window [class="LearnOpenGL"] floating enable
+for_window [class="OpenGL"] floating enable
 
 # Open applications on specific workspaces
 #assign [class="URxvt"] $ws1
@@ -426,7 +430,8 @@ bindsym $mod+bracketright workspace next
 # for_window [instance="gnome-terminal-server" title="Life"] floating enable, move scratchpad, scratchpad show;
 # for_window [instance="gnome-terminal-server"] floating enable, move scratchpad, scratchpad show;
 bindsym $mod+Shift+BackSpace move scratchpad
-bindsym $mod+backslash scratchpad show
+# bindsym $mod+backslash scratchpad show
+bindsym $mod+Shift+Tab scratchpad show
 bindsym $mod+Print exec gnome-screenshot -i
 bindsym $mod+KP_Divide exec i3-input -F 'rename workspace to "%s"' -P 'Rename workspace: '
 #bindsym $mod+Insert exec i3-input -F 'workspace "%s"' -P 'new workspace: '
